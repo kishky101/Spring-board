@@ -1,11 +1,12 @@
 .course {
     display: flex;
     flex-direction: column;
+    //max-width: 400px;
     width: 100%;
     height: max-content;
-    gap: 20px;
+    gap: 30px;
     background-color: #E9E9E9;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1.9rem 1.9rem 3rem 1.9rem;
     position: relative;
     border-radius: 5px;
 
@@ -28,6 +29,10 @@
         transform: scaleY(1);
     }
 
+    // &:focus::before{
+    //     transform: scaleY(1);
+    // }
+
     .iconContainer {
         display: flex;
         justify-content: center;
@@ -48,11 +53,37 @@
 
     .courseTitle {
         font-size: 25px;
+        font-family: "Montserrat", sans-serif;
         color: var(--dark-green-clr);
         white-space: nowrap;
     }
     
     .courseIntro {
-        color: var(--dark-green-clr);
+        font-family: "Open sans", sans-serif;
+        opacity: .5;
+    }
+
+
+    @media screen and (max-width: 385px) {
+        
+        .iconContainer {
+            padding:  .3rem;
+            width: 60px;
+            height: 70px;
+    
+    
+            .icon {
+                font-size: 40px;
+            }
+        }
+    
+        .courseTitle {
+            font-size: 20px;
+        }
+        
+        .courseIntro {
+            font-size: 14px;
+        }
+    
     }
 }

@@ -1,3 +1,4 @@
+import Page from './routes/single-page/single-page.component'
 import Navigation from './routes/Navigation/navigation.component'
 import { Outlet } from 'react-router-dom'
 import './App.scss'
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <Routes>
+      <Route index element={<Page />} />
       <Route path='/' element={<Navigation />} >
         <Route path='about' element={<About />} />
         <Route path='staff' element={<Staff />} />

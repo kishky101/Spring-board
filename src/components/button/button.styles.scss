@@ -9,6 +9,7 @@
     font-family: 'Open Sans';
     position: relative;
     z-index: 1;
+    white-space: nowrap;
     
     &::before {
         content: '';
@@ -61,8 +62,8 @@
     }
 
     &.register {
-        background-color: var(--default-text-clr);
-        opacity: .5;
+        background-color: var(--light-brown-clr);
+        opacity: 1;
         color: var(--dark-green-clr);
 
         &::before {
