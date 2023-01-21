@@ -20,8 +20,8 @@ function App() {
 
   return (
     <Routes>
-      <Route index element={<Page />} />
       <Route path='/' element={<Navigation />} >
+        <Route index  element={<Page />} />
         <Route path='about' element={<About />} />
         <Route path='staff' element={<Staff />} />
         <Route path='contact' element={<Contact />} />

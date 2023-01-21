@@ -1,0 +1,242 @@
+.our-program-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    margin-bottom: 200px;
+
+    .our-program-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 50px;
+            color: var(--header-text-clr);
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .our-program-schedule-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        width: 60%;
+
+        .our-program-schedule {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .program-icon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 3px;
+                background-color: var(--light-brown-clr);
+
+
+                .our-program-icon {
+                    font-size: 40px;
+                    color: var(--default-text-clr);
+                    transition: transform 1s ease-in-out;
+                }
+            }
+
+            .our-program-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                h3 {
+                    text-transform: capitalize;
+                    font-family: 'Montserrat', sans-serif;
+                    margin-bottom: 15px;
+                    color: var(--header-text-clr);
+                    font-size: 24px;
+                    white-space: nowrap;
+                } 
+
+                p {
+                    font-family: 'Open sans', sans-serif;
+                    white-space: nowrap;
+                    opacity: .5; 
+
+                    span {
+                        display: block;
+                    }  
+                }
+            }
+
+
+            &:hover {
+
+
+                .our-program-icon {
+                    transform: rotate(360deg);
+                }
+            }
+
+        
+        }
+    }
+
+
+
+
+    @media screen and (max-width: 1155px) {
+        
+        flex-direction: column;
+        gap: 30px;
+
+        .our-program-header {
+            width: auto;
+            
+            h2 {
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+
+
+        .our-program-schedule-container {
+            width: auto;
+            justify-content: space-around;
+        }
+    }
+
+
+    @media screen and (max-width: 805px) {
+        gap: 60px;
+
+        .our-program-schedule-container {
+            flex-direction: column;
+            gap: 30px;
+
+            .our-program-schedule:first-of-type {
+                transform: translateX(-100px);
+
+            }
+
+            .our-program-schedule:last-of-type {
+                transform: translateX(100px);
+
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 550px) {
+
+        .our-program-schedule-container {
+            flex-direction: column;
+            gap: 30px;
+
+            .our-program-schedule:first-of-type {
+                transform: translateX(-20px);
+
+            }
+
+            .our-program-schedule:last-of-type {
+                transform: translateX(20px);
+
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 400px) {
+
+        .our-program-header {
+            
+    
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .our-program-schedule-container {
+            flex-direction: column;
+            gap: 30px;
+
+            .our-program-schedule {
+
+                .program-icon-container {
+                    width: 70px;
+                    height: 70px;
+
+
+                    .our-program-icon {
+                        font-size: 30px;
+                    }
+                }
+
+                .our-program-description {
+                    
+    
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                }
+
+            }
+
+            .our-program-schedule:first-of-type {
+                transform: translateX(0px);
+
+            }
+
+            .our-program-schedule:last-of-type {
+                transform: translateX(0px);
+
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 340px) {
+        .our-program-schedule-container {
+
+            .our-program-schedule {
+                gap: 20px;
+
+                .program-icon-container {
+                    width: 60px;
+                    height: 60px;
+
+
+                    .our-program-icon {
+                        font-size: 30px;
+                    }
+                }
+
+                .our-program-description {
+                    
+    
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+}

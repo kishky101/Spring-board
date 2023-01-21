@@ -13,8 +13,8 @@ const Navigation = () => {
                     <Link to='/'>
                         <h2><span className='logo-first'>Spring</span><span className='logo-last'>Board</span></h2>
                     </Link>
-                    <button class="hamburger-icon">
-                        <label for="dropdown">
+                    <button className ="hamburger-icon">
+                        <label htmlFor ="dropdown">
                             <FontAwesomeIcon icon={faBars} className = 'nav-icon fa-bars' />
                             <FontAwesomeIcon icon={faXmark} className = 'nav-icon fa-xmark' />
                            {/* <FontAwesomeIcon icon={faAngleUp} className = 'nav-icon fa-angle-up' />
@@ -24,6 +24,7 @@ const Navigation = () => {
                     </button>
                 </div>
                 <div className='nav-links'>
+                    <Link className='nav-link' to='/'>Home</Link>
                     <Link className='nav-link' to='About'>About Us</Link>
                     <Link className='nav-link' to='Programs'>Programs</Link>
                     <Link className='nav-link' to='Courses'>Courses</Link>
@@ -35,7 +36,6 @@ const Navigation = () => {
                 </div>   
             </div>
             <Outlet />
-            
         </>
     )
 }

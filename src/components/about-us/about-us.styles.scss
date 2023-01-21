@@ -54,8 +54,6 @@
         justify-content: center;
         align-items: center;
 
-
-
         .about-us-text-wrapper {
             display: grid;
             height: 70%;
@@ -65,8 +63,9 @@
             .about-us-header {
                 font-family: 'Montserrat', sans-serif;
                 font-size: 32px;
-                font-weight: 900;
+                font-weight: 700;
                 text-transform: uppercase;
+                color: var(--header-text-clr);
             }
 
             .about-us-header2 {
@@ -82,6 +81,94 @@
                 font-size: 20px;
                 line-height: 45px;
                 opacity: .5;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 1028px) {
+        flex-direction: column;
+        gap: 30px;
+
+        .about-us-img-container {
+            width: 50%;
+            margin-bottom: 60px;
+        }
+
+
+        .about-us-texts {
+            justify-content: flex-end;
+            align-items: flex-end;
+    
+            .about-us-text-wrapper {
+                height: auto;
+                width: 80%;
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+        .about-us-img-container {
+
+            
+    
+    
+            .about-us-img {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: 1;
+                transition: transform .3s ease-in-out;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(145, 123, 90, .2);
+                transform: translate(15px, 15px);
+                transition: transform .3s ease-in-out;
+            }
+    
+            &:hover {
+                .about-us-img {
+                    transform: translate(15px, 15px);
+                }
+    
+                &::before {
+                    transform: translate(-15px, -15px);
+                }
+            }
+            
+        }
+
+
+        .about-us-texts {
+            justify-content: flex-end;
+            align-items: flex-end;
+    
+            .about-us-text-wrapper {
+                height: auto;
+                width: 90%;
+
+                .about-us-header {
+                    font-size: 30px;
+                }
+    
+                .about-us-header2 {
+                    font-size: 25px;
+                }
+    
+                .about-us-description {
+                    font-size: 1rem;
+                    line-height: 45px;
+                    opacity: .5;
+                }
             }
         }
     }

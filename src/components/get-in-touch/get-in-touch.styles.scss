@@ -1,0 +1,121 @@
+.get-in-touch-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 3rem;
+    gap: 60px;
+
+    .get-in-touch-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        max-width: 50%;
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 70%;
+            line-height: 40px;
+            letter-spacing: 2px;
+            color: var(--header-text-clr);
+        }
+    }
+
+    .get-in-touch-details-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .get-in-touch-details {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+
+            span {
+                display: block;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 2rem;
+                letter-spacing: 1px;
+                white-space: nowrap;
+
+                .get-in-touch-icon {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+
+
+        .get-in-touch-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+    
+            h3 {
+                font-size: 30px;
+                width: auto;
+                white-space: nowrap;
+            }
+        }
+
+
+        .get-in-touch-details-container {
+            width: auto;
+    
+            .get-in-touch-details {
+                justify-content: center;
+                align-items: flex-start;
+                max-width: 100%;
+    
+                span {
+                    font-size: 18px;
+    
+    
+                    .get-in-touch-icon {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 420px) {
+        padding: 8rem 0;
+
+        .get-in-touch-header {
+    
+            h3 {
+                font-size: 25px;
+                letter-spacing: 0px;
+            }
+        }
+
+
+        .get-in-touch-details-container {
+    
+            .get-in-touch-details {
+                justify-content: center;
+                align-items: flex-start;
+                max-width: 100%;
+    
+                span {
+                    font-size: 1rem;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+    }
+
+
+}
