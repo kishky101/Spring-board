@@ -1,6 +1,6 @@
 .hero-section {
     width: auto;
-    height: 100vh;
+    height: 80vh;
     background: url(../../assets/hero_bg.png);
     background-position: center;
     background-attachment: fixed;
@@ -11,6 +11,8 @@
     align-items: flex-end;
     color: var(--default-text-clr);
     margin-bottom: 200px;
+    position: relative;
+    top: 80px;
 
 
 

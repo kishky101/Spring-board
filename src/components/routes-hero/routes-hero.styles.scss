@@ -6,18 +6,35 @@
     width: 100%;
     height: 50vh;
     background: rgba(145, 123, 90, .3);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 100px;
+    top: 50px;
+    background: url('https://tafsiralquran.id/wp-content/uploads/2020/10/Allah-Swt-mengangkat-Muhammad-Saw-menjadi-rasul-696x392.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     img {
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
     }
 
 
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(145, 123, 90, .3);;
+    }
 
-    @media screen and (max-width:700px) and (orientation: landscape) {
+    @media screen and (max-width:700px) {
         
         justify-content: flex-end;
         height: 50vh;
+
     }
 }
