@@ -21,6 +21,10 @@ const Testimonials = () => {
 
     return (
         <div className='testimonial-container'>
+            <div>
+                <h2 className='testimonial-header'>testimonials</h2>
+                <p className='testimonial-description'>Read what our students have to say about us</p>
+            </div>
             <Swiper
                 style={{
                 "--swiper-navigation-color": "var(--light-brown-clr)",

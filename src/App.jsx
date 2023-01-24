@@ -4,14 +4,13 @@ import About from './routes/About/about.component'
 import Programs from './routes/programs/programs.component'
 import Courses from './routes/Courses/courses.component'
 import Staff from './routes/Staff/staff.component'
-import { Outlet } from 'react-router-dom'
+import Contact from './routes/Contact/contact.component'
+import Register from './routes/Register/register.component'
 import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 
 
-const Contact = () => {
-  return <h1>I am Contact</h1>
-}
+
 
 function App() {
 
@@ -25,6 +24,7 @@ function App() {
         <Route path='courses' element={<Courses />} />
         <Route path='staff' element={<Staff />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='register' element={<Register />} />
       </Route>
     </Routes>
   )

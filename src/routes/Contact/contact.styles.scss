@@ -1,0 +1,121 @@
+.contact-form-container {
+
+    .contact-form {
+        width: 80%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--header-text-clr);
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.3rem;
+            opacity: .7;
+            line-height: 1.5;
+        }
+
+        .contact-form-fields {
+            border: 1px solid var(--light-brown-clr);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 1rem;
+
+            form {
+
+                .message-textarea {
+                    margin-bottom: 2rem;
+
+                    label {
+                        display: block;
+                        margin-bottom: .5rem;
+                        opacity: .5;
+                    }
+
+                    textarea {
+                        border: 1px solid var(--light-brown-clr);
+                        width: 100%;
+                        height: 10rem;
+                        border-radius: .5rem;
+                        padding: .5rem;
+                        font-size: 1rem;
+                        font-family: 'Open sans', sans-serif;
+                        opacity: .5;
+
+                        &:focus {
+                            outline: none;
+                            border: 3px groove var(--light-brown-clr);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        
+        .contact-form {
+            width: 95%;
+            padding: 1rem;
+    
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                text-align: justify;
+                font-size: 1.3rem;
+                opacity: .7;
+                line-height: 1.5;
+            }
+    
+            .contact-form-fields {
+                border: 1px solid var(--light-brown-clr);
+                padding: 2rem;
+                margin: 2rem 0;
+                border-radius: 1rem;
+            }
+        }
+    
+    }
+
+
+    @media screen and (max-width: 400px) {
+        
+        .contact-form {
+            width: auto;
+            padding: .5rem;
+    
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                text-align: justify;
+                font-size: 1.3rem;
+                opacity: .7;
+                line-height: 1.5;
+            }
+    
+            .contact-form-fields {
+                border: 1px solid var(--light-brown-clr);
+                padding: 2rem;
+                margin: 2rem 0;
+                border-radius: 1rem;
+            }
+        }
+    
+    }
+
+}
