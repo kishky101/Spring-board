@@ -26,7 +26,6 @@ const Page = () => {
             <Testimonials />
             <GetStarted />
             <GetInTouch />
-            <Footer />
         </div>
         
     )
