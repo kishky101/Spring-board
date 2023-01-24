@@ -9,7 +9,7 @@ const Hero = () => {
         <header className='hero-section'>
             <div className='hero-text-container'>
                 <h1>Springboard Language Academy</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias possimus ex, ipsum modi a corrupti eos quo </p>
+                <p>Bridge the communication gaps among nations through professional language trainings.</p>
                 <div className='hero-buttons'>
                     <Button>Register Now</Button>
                     <Button buttonType={'defaultTrans'}>Contact Us</Button>

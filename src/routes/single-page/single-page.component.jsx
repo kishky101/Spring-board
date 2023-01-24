@@ -10,7 +10,6 @@ import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
 import courses from '../../courses';
 import Footer from '../../components/footer/footer.component';
 import './single-page.styles.scss';
-import SwiperCopy from '../../components/swiper-copy/swiper-copy';
 import TestimonialCard from '../../components/testimonial card/testimonial-card.component';
 
 const Page = () => {
@@ -24,8 +23,6 @@ const Page = () => {
             <CourseContainer>
                 {courses.map(course => <CourseCard course={course} key={course.id}/> )}
             </CourseContainer>
-            {/*<TestimonialCard />*/}
-    {/*<SwiperCopy />*/}
             <Testimonials />
             <GetStarted />
             <GetInTouch />

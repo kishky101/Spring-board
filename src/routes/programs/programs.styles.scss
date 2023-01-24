@@ -1,0 +1,140 @@
+.program-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .program-text-container {
+        width: 80%;
+        height: auto;
+     
+        .program-text {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.7;
+            letter-spacing: .7px;
+
+            .program-text-header {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: var(--header-text-clr);
+                line-height: 100px;
+                white-space: nowrap;
+            }
+
+            p {
+                text-align: justify;
+                font-size: 1.3rem;
+                opacity: .7;
+            }
+        }
+
+
+        .program-description {
+            margin: 30px 0;
+
+            ul {
+                list-style-type: none;
+                line-height: 1.7;
+                letter-spacing: .7px;
+
+                li {
+                    margin-bottom: 30px;
+
+
+                    h4 {
+                        display: flex;
+                        font-size: 1.5rem;
+                        gap: 30px;
+                        align-items: center;
+                        justify-content: flex-start;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 500px;
+                        text-transform: capitalize;
+                        color: var(--header-text-clr);
+                        background-color: rgba(145, 123, 90, .2);
+                        border-radius: 50px;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        text-align: justify;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .program-text-container {
+            width: 90%;
+         
+            .program-text {
+    
+                .program-text-header {
+                    font-size: 1.8rem;
+                }
+    
+                p {
+                    text-align: justify;
+                    font-size: 1.2rem;
+                }
+            }
+    
+    
+            .program-description {
+                margin: 30px 0;
+    
+                ul {
+
+    
+                    li {
+                        margin-bottom: 30px;
+                        
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+    
+                        p {
+                            font-size: 1.2rem;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+            
+    }
+
+
+    @media screen and (max-width: 300px) {
+
+        .program-description {
+            margin: 30px 0;
+
+            ul {
+
+
+                li {
+                    margin-bottom: 30px;
+
+
+                    p {
+                        font-size: 1.2rem;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

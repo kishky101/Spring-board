@@ -9,8 +9,12 @@ const CourseCard = ({course}) => {
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={iconClass} className='icon'/>
             </div>
-            <h2 className='courseTitle'>{courseName}</h2>
-            <p className='courseIntro'>{courseIntro}</p>
+            <h2 className='courseTitle'>{courseName}</h2>  
+            <div className="demo-div">
+                <p className='courseIntro'>{courseIntro}</p>
+                <input type={'checkbox'} className='expand-button' />
+            </div>
+            
         </div>
     )
 }

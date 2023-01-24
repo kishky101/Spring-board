@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Button from "../../components/button/button.component";
+import Footer from "../../components/footer/footer.component";
 import { faXmark, faBars, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import './navigation.styles.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,6 +37,7 @@ const Navigation = () => {
                 </div>   
             </div>
             <Outlet />
+            <Footer />
         </>
     )
 }

@@ -59,6 +59,10 @@
             font-size: 20px;
             position: relative;
 
+            &:active {
+                color: var(--dark-green-clr);
+            }
+
             &:not(:last-child):before {
                 content: '';
                 position: absolute;
