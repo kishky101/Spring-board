@@ -16,7 +16,9 @@ const AboutUs = () => {
                     <Link style={{color: 'black', textDecoration: 'underline', fontSize: '14px'}} to='About'>Read More</Link>
                     </p>
                     <div>
-                        <Button >Register Now</Button>    
+                        <Link to='Register'>
+                            <Button>Register Now</Button>  
+                        </Link>     
                     </div>
 
                 </div>   
