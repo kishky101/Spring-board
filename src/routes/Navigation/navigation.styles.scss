@@ -4,7 +4,6 @@
     justify-content: space-between;
     padding:15px 30px;
     background-color: var(--light-brown-clr);
-    //font-family: 'Open Sans', sans-serif;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -58,6 +57,23 @@
         .nav-link {
             font-size: 20px;
             position: relative;
+
+            &.active {
+                color: var(--dark-green-clr);
+                
+                &:not(:last-child):before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -28px;
+                    right: 0;
+                    height: 5px;
+                    background-color: var(--default-text-clr);
+                    transform: scaleX(0);
+                    transition: transform 300ms ease-in-out;
+                    transform: scaleX(1);
+                }
+            }
 
             &:active {
                 color: var(--dark-green-clr);

@@ -26,10 +26,12 @@
         }
 
         .contact-form-fields {
-            border: 1px solid var(--light-brown-clr);
+            border: 3px solid var(--light-brown-clr);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 1rem;
+            box-shadow: 3px 5px 2px var(--light-brown-clr) inset, 
+            -3px -3px 2px var(--light-brown-clr) inset;
 
             form {
 

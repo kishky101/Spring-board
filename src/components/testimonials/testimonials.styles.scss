@@ -17,10 +17,11 @@
   }
 
   .testimonial-description {
-      font-family: "Montserrat", sans-serif;
-      margin-bottom: 60px;
-      font-size: 25px;
-      text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 60px;
+    font-size: 25px;
+    text-align: center;
+    opacity: .5;
   }
 
 
@@ -91,6 +92,15 @@
 
   @media screen and (max-width: 400px) {
     padding: 0 0;
+
+    .testimonial-header {
+      font-size: 30px;
+    }
+  
+    .testimonial-description {
+      font-size: 20px;
+      text-align: center;
+    }
 
     .mySwiper {
       width: 80%;

@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Link, Outlet, NavLink } from "react-router-dom";
 import Button from "../../components/button/button.component";
 import Footer from "../../components/footer/footer.component";
 import { faXmark, faBars, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const Navigation = () => {
+    const [checked, setChecked] = useState(false);
+
+    const openNav = () => setChecked(true)
+    const closeNav = () => setChecked(false)
+
     return (
         <>
             <div className='navigation'>
@@ -16,22 +22,22 @@ const Navigation = () => {
                     </Link>
                     <button className ="hamburger-icon">
                         <label htmlFor ="dropdown">
-                            <FontAwesomeIcon icon={faBars} className = 'nav-icon fa-bars' />
-                            <FontAwesomeIcon icon={faXmark} className = 'nav-icon fa-xmark' />
+                            <FontAwesomeIcon onClick={openNav} icon={faBars} className = 'nav-icon fa-bars' />
+                            <FontAwesomeIcon onClick={closeNav} icon={faXmark} className = 'nav-icon fa-xmark' />
                            {/* <FontAwesomeIcon icon={faAngleUp} className = 'nav-icon fa-angle-up' />
                                 <FontAwesomeIcon icon={faAngleDown} className = 'nav-icon fa-angle-down' />*/}
                         </label>
-                        <input type="checkbox" id="dropdown" />
+                        <input type="checkbox" id="dropdown" checked = {checked}/>
                     </button>
                 </div>
                 <div className='nav-links'>
-                    <Link className='nav-link' to='/'>Home</Link>
-                    <Link className='nav-link' to='About'>About Us</Link>
-                    <Link className='nav-link' to='Programs'>Programs</Link>
-                    <Link className='nav-link' to='Courses'>Courses</Link>
-                    <Link className='nav-link staff' to='Staff'>Staffs</Link>
-                    <Link className='nav-link contact' to='Contact'>Contact Us</Link>
-                    <Link className='nav-link' to='Register'>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='/'>Home</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='About'>About Us</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Programs'>Programs</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Courses'>Courses</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Staff'>Staffs</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Contact'>Contact Us</NavLink>
+                    <Link onClick={closeNav} className='nav-link' to='Register'>
                         <Button children={'Register'} buttonType='register' type='button'/>
                     </Link>
                 </div>   
