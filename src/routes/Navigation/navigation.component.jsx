@@ -27,7 +27,7 @@ const Navigation = () => {
                            {/* <FontAwesomeIcon icon={faAngleUp} className = 'nav-icon fa-angle-up' />
                                 <FontAwesomeIcon icon={faAngleDown} className = 'nav-icon fa-angle-down' />*/}
                         </label>
-                        <input type="checkbox" id="dropdown" checked = {checked}/>
+                        <input type="checkbox" id="dropdown" readOnly checked = {checked}/>
                     </button>
                 </div>
                 <div className='nav-links'>

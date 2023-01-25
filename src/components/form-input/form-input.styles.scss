@@ -10,6 +10,9 @@ $main-color: black;
 .group {
   position: relative;
   margin: 45px 0;
+  cursor: pointer;
+  height: 2rem;
+  
 
   .form-input {
     background: none;
@@ -37,6 +40,30 @@ $main-color: black;
     letter-spacing: 0.3em;
   }
 
+  input[type='checkbox'], input[type='radio'] {
+    position: absolute;
+    top: -35px;
+    font-size: 32px;
+    width: 25px;
+    height: 50px;
+    background: var(--light-brown-clr);
+    color: var(--light-brown-clr);
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input[type='checkbox']:checked::before{
+    background-color: var(--light-brown-clr);
+  }
+
+  .radio-label {
+    position: relative;
+    left: 50px;
+    height: 40px;
+    font-size: 1.1rem;
+    opacity: .7;
+  }
+
   .form-input-label {
     color: $sub-color;
     font-size: 16px;
@@ -51,4 +78,32 @@ $main-color: black;
       @include shrinkLabel();
     }
   }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(145, 123, 90, .2);
+    border-radius: 50%;
+  }
+
+  &:has(input:checked) {
+
+    .checkmark{
+      background-color: var(--light-brown-clr);
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        top: 7px;
+        left: 8px;
+        background-color: #ffc;
+        border-radius: 50%;
+      }
+    }
+  } 
 }
