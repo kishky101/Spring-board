@@ -8,12 +8,23 @@ import Contact from './routes/Contact/contact.component'
 import Register from './routes/Register/register.component'
 import './App.scss'
 import { Route, Routes } from 'react-router-dom'
-
+import { addDocToFirebase, getDocFromFirebase } from './utils/firebase/firebase.utils'
+import { useEffect } from 'react'
+import staffs from './staff'
+import courses from './courses'
 
 
 
 function App() {
 
+  // useEffect(() => {
+  //   addDocToFirebase('courses', courses);
+  // }, [])
+
+  // useEffect(() => {
+  // const response  = getDocFromFirebase('staffs')
+  //   response.then(res => console.log(res.sort((a, b) => a.id - b.id)))
+  // }, [])
 
   return (
     <Routes>
