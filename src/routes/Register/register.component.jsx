@@ -29,22 +29,26 @@ const Register = () => {
         setFormFields({...formFields, [name]: value})
     }
 
+    const clearFormFields = () => setFormFields(defaultFields)
+
     const onSubmitHandler = (event) => {
         event.preventDefault();
         console.log(formFields)
+        clearFormFields()
     }
 
     return (
-        <div className="contact-form-container">
+        <div className="register-form-container">
         <RoutesHero />
-        <div className="contact-form">
+        <div className="register-form">
             <h2>Register Now</h2>
-            <p>ARABIC ONLINE COURSE REGISTRATION FORM.</p>
-            <span>COURSE DURATION - (13 WEEKS)</span>
-            <div className="contact-form-fields">
+            <p>SpringBoard Language Academy Arabic Online Registeration Form.</p>
+            <span className='register-span'>COURSE DURATION - (13 WEEKS)</span>
+            <span style={{textAlign: 'center', width: '100%', marginTop: '30px', display: 'block'}}>Kindly fill all fields as all fields are required *</span>
+            <div className="register-form-fields">
                 <form>
                     <FormInput 
-                        label={'First Name'}
+                        label={'First Name*'}
                         type='text'
                         name='firstName'
                         required
@@ -52,7 +56,7 @@ const Register = () => {
                         onChange={onChangeHandler}
                     />
                     <FormInput 
-                        label={'Last Name'}
+                        label={'Last Name*'}
                         type='text'
                         name='lastName'
                         required
@@ -60,7 +64,7 @@ const Register = () => {
                         onChange={onChangeHandler}
                     />
                     <FormInput 
-                        label={'Email Address'}
+                        label={'Email Address*'}
                         type='email'
                         name='email'
                         required
@@ -68,15 +72,15 @@ const Register = () => {
                         onChange={onChangeHandler}
                     />
                     <FormInput 
-                        label={'Tel. Number (Preferably WhatsApp no)'}
+                        label={' WhatsApp Number*'}
                         type='tel'
                         name='number'
                         required
                         value={number}
                         onChange={onChangeHandler}
                     />
-                    <label htmlFor = 'arabic-background'>Background in Arabic
-                    *
+                    <label className='register-label' htmlFor = 'arabic-background'>Background in Arabic
+                    * </label>
                         <FormInput 
                             label={'Basic - I want to start from the scratch'}
                             type='radio'
@@ -96,7 +100,7 @@ const Register = () => {
                             onChange={onChangeHandler}
                         />
                         <FormInput 
-                            label={'Advance: I can read any Arabic text, but I want to learn more'}
+                            label={'Advance - I can read any Arabic text, but I want to learn more'}
                             type='radio'
                             name='background'
                             id = 'advance'
@@ -104,9 +108,9 @@ const Register = () => {
                             value={'Advance: I can read any Arabic text, but I want to learn more'}
                             onChange={onChangeHandler}
                         />
-                    </label>
-                    <label htmlFor = 'internet'>Access to Internet
-                    *
+                   
+                    <label className='register-label' htmlFor = 'internet'>Access to Internet
+                    *</label>
                         <FormInput 
                             label={'Excellent'}
                             type='radio'
@@ -143,11 +147,11 @@ const Register = () => {
                             value={'poor'}
                             onChange={onChangeHandler}
                         />
-                    </label>
-                    <label htmlFor = 'days'>Which Option do you prefer? *
+                    
+                    <label className='register-label' htmlFor = 'days'>Which Option do you prefer? * </label>
                         <FormInput 
                             label={'WEEKDAYS - Mondays - Wednesdays'}
-                            type='checkbox'
+                            type='radio'
                             name='days'
                             id = 'weekdays'
                             value={'WEEKDAYS - Mondays - Wednesdays'}
@@ -155,7 +159,7 @@ const Register = () => {
                         />
                         <FormInput 
                             label={'WEEKENDS - Saturdays and Sundays'}
-                            type='checkbox'
+                            type='radio'
                             name='days'
                             id = 'weekend'
                             value={'WEEKENDS - Saturdays and Sundays'}
@@ -163,13 +167,13 @@ const Register = () => {
                         />
                         <FormInput 
                             label={'WEEKDAYS - Thursdays and Fridays (For Basic Classes only)'}
-                            type='checkbox'
+                            type='radio'
                             name='days'
                             id = 'thur-fri'
                             value={'WEEKDAYS - Thursdays and Fridays (For Basic Classes only)'}
                             onChange={onChangeHandler}
                         />
-                    </label>
+                    
                     <FormInput 
                         label={'SPONSOR*'}
                         type='text'
@@ -178,7 +182,7 @@ const Register = () => {
                         value={sponsor}
                         onChange={onChangeHandler}
                     />
-                    <label htmlFor='agreement'>I understand that I will have to pay N20,000/term OR $50  OR 45 Euro OR 40 UK pound/term to  confirm  my registration to any of the accounts below:
+                    <label className='register-label' htmlFor='agreement'>* I understand that I will have to pay N20,000/term OR $50  OR 45 Euro OR 40 UK pound/term to  confirm  my registration to any of the accounts below:  </label>
                         <FormInput 
                             label={'YES'}
                             type='checkbox'
@@ -188,11 +192,12 @@ const Register = () => {
                             value={'YES'}
                             onChange={onChangeHandler}
                         />
-                    </label>
+                  
 
 
                     <Button onClick ={onSubmitHandler} type='submit'>SUBMIT</Button>
                 </form>
+                <span style={{textAlign: 'right', width: '100%', marginTop: '30px', display: 'block'}} onClick={clearFormFields}>clear form</span>
             </div>
         </div>
         <GetInTouch />

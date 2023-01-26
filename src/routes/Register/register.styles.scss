@@ -1,0 +1,115 @@
+.register-form-container {
+
+    .register-form {
+        max-width: 1000px;
+        width: 80%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--header-text-clr);
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.3rem;
+            opacity: .7;
+            line-height: 1.5;
+        }
+
+        .register-span {
+            opacity: .5;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .register-form-fields {
+            border: 3px solid var(--light-brown-clr);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 1rem;
+            box-shadow: 3px 5px 2px var(--light-brown-clr) inset, 
+            -3px -3px 2px var(--light-brown-clr) inset;
+
+            form {
+
+                label {
+                    display: block;
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    white-space: wrap;
+                    //margin-right: 1rem;
+
+                    &.register-label {
+                        color: var(--header-text-clr);
+                        font-size: 1.2rem;
+                        font-family: 'Montserrat', sans-serif;
+                        line-height: 1.7;
+                        margin-top: 5rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        
+        .register-form {
+            width: 95%;
+            padding: 1rem;
+    
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            .register-form-fields {
+                padding: 2rem;
+                margin: 2rem 0;
+                border-radius: 1rem;
+
+                form {
+
+                    label {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    
+    }
+
+
+    @media screen and (max-width: 400px) {
+        
+        .register-form {
+            width: auto;
+            padding: .5rem;
+    
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                font-size: 1.1rem;
+            }
+    
+
+        }
+    
+    }
+
+}
