@@ -55,3 +55,28 @@ export const getDocFromFirebase = async (nameOfCollection) => {
     const querySnapshot = await getDocs(q);
     return querySnapshot.docs.map(docSnapshot => docSnapshot.data())
 }
+
+
+export const createUserRegistrationDocument = async (userObj, collection, additionalInformation, key) => {
+    if (!userObj) return
+
+    const userDocRef = doc(db, collection, userObj[key]);
+
+    const userSnapShot = await getDoc(userDocRef);
+
+    if (!userSnapShot.exists()) {
+        const createdAt = new Date();
+
+        try {
+            await setDoc(userDocRef, {
+                ...userObj,
+                createdAt,
+                ...additionalInformation
+            });
+        } catch (error) {
+            console.log('An Error occured', error.message)
+        }
+    }
+
+    return userSnapShot;
+}

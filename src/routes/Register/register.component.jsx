@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { redirect, useNavigate } from 'react-router-dom';
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
 import FormInput from '../../components/form-input/form-input.component';
 import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
 import Button from '../../components/button/button.component';
+import { createUserRegistrationDocument } from '../../utils/firebase/firebase.utils';
 import './register.styles.scss'
 
 const defaultFields = {
@@ -18,23 +20,29 @@ const defaultFields = {
 }
 
 const Register = () => {
-
+    const navigate = useNavigate();
     const [formFields, setFormFields] = useState(defaultFields)
     
-    const {firstName, lastName, email, number, message, sponsor}  = formFields;
-
+    const {firstName, lastName, email, number, background, internet, days, agreement, sponsor}  = formFields;
+    const fullName = firstName + ' ' + lastName
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
 
-        setFormFields({...formFields, [name]: value})
+        setFormFields({...formFields, [name]: value, fullName})
     }
 
     const clearFormFields = () => setFormFields(defaultFields)
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        console.log(formFields)
+        if(!firstName || !lastName || !email || !number || !background || !internet || !days || !agreement || !sponsor) {
+            alert('All fields are required')
+            return
+        }
+        const userDocRef = createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
+        console.log(userDocRef)
         clearFormFields()
+        return navigate("/payment")
     }
 
     return (
@@ -200,6 +208,7 @@ const Register = () => {
                 <span style={{textAlign: 'right', width: '100%', marginTop: '30px', display: 'block'}} onClick={clearFormFields}>clear form</span>
             </div>
         </div>
+
         <GetInTouch />
     </div>
     )

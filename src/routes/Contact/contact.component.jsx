@@ -3,6 +3,7 @@ import RoutesHero from "../../components/routes-hero/routes-hero.component";
 import FormInput from "../../components/form-input/form-input.component";
 import Button from "../../components/button/button.component";
 import GetInTouch from "../../components/get-in-touch/get-in-touch.component";
+import { createUserRegistrationDocument } from "../../utils/firebase/firebase.utils";
 import './contact.styles.scss'
 
 const defaultFields = {
@@ -17,11 +18,24 @@ const Contact = () => {
     const [formFields, setFormFields] = useState(defaultFields)
 
     const {firstName, lastName, email, number, message}  = formFields;
-
+    const fullName = `${firstName} ${lastName}`
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
 
-        setFormFields({...formFields, [name]: value})
+        setFormFields({...formFields, [name]: value, fullName})
+    }
+
+    const clearFormFields = () => setFormFields(defaultFields)
+
+    const onSubmitHandler = (event) => {
+        event.preventDefault();
+        if(!firstName || !lastName || !email || !number || !message) {
+            alert('All fields are required')
+            return
+        }
+        const userDocRef = createUserRegistrationDocument(formFields, 'Contact Form', undefined, 'fullName')
+        console.log(userDocRef)
+        clearFormFields()
     }
 
     return (
@@ -77,7 +91,7 @@ const Contact = () => {
                         </div>
 
 
-                        <Button type='submit'>Send Message</Button>
+                        <Button onClick={onSubmitHandler} type='submit'>Send Message</Button>
                     </form>
                 </div>
             </div>

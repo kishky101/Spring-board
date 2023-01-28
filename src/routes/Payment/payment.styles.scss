@@ -1,0 +1,99 @@
+.payment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .payment-description {
+        max-width: 1000px;
+        width: 80%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+        padding: 2rem;
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--header-text-clr);
+            line-height: 1.5;
+            text-align: center;
+
+            &~p {
+                text-align: center;
+                font-size: 1.3rem;
+                opacity: .7;
+                line-height: 1.5;
+            }
+        }
+
+
+
+        .payment-details {
+            border: 3px solid var(--light-brown-clr);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 1rem;
+            line-height: 1.5;
+            max-width: auto;
+            box-shadow: 3px 5px 2px var(--light-brown-clr) inset, 
+            -3px -3px 2px var(--light-brown-clr) inset;
+
+            table {
+                width: 100%;
+                height: auto;
+                text-align: center;
+
+                caption {
+                    //text-align: left;
+                    margin-bottom: 2rem;
+                    line-height: 2;
+
+                    h5 {
+                        font-size: 1.5rem;
+                        text-transform: capitalize;
+                        color: var(--header-text-clr);
+                    }
+        
+                    h6 {
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        color: var(--header-text-clr);
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
+
+           
+            }
+
+        }
+    }
+
+    
+    @media screen and (max-width: 600px) {
+        
+        .payment-description {
+            width: auto;
+            padding: .5rem;
+    
+            h2 {
+                font-size: 1.5rem;
+            }
+    
+            p {
+                font-size: 1.1rem;
+            }
+    
+
+            .payment-details {
+                padding: 1rem;
+            }
+        }
+    
+    }
+}

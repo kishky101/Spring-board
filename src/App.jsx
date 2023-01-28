@@ -6,6 +6,7 @@ import Courses from './routes/Courses/courses.component'
 import Staff from './routes/Staff/staff.component'
 import Contact from './routes/Contact/contact.component'
 import Register from './routes/Register/register.component'
+import Payment from './routes/Payment/payment.component'
 import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import { addDocToFirebase, getDocFromFirebase } from './utils/firebase/firebase.utils'
@@ -21,10 +22,10 @@ function App() {
   //   addDocToFirebase('courses', courses);
   // }, [])
 
-  // useEffect(() => {
-  // const response  = getDocFromFirebase('staffs')
-  //   response.then(res => console.log(res.sort((a, b) => a.id - b.id)))
-  // }, [])
+  useEffect(() => {
+  const response  = getDocFromFirebase('Registeration')
+    response.then(res => console.table(res.sort((a, b) => a.createdAt - b.createdAt)))
+  }, [])
 
   return (
     <Routes>
@@ -36,6 +37,7 @@ function App() {
         <Route path='staff' element={<Staff />} />
         <Route path='contact' element={<Contact />} />
         <Route path='register' element={<Register />} />
+        <Route path='payment' element={<Payment />} />
       </Route>
     </Routes>
   )
