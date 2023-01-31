@@ -9,7 +9,7 @@ const CourseCard = ({course}) => {
     useEffect(() => {
         import("@fortawesome/free-solid-svg-icons").then((res) => setIcon(res[iconClass]));
     })
-    
+       
     return (
         <div className='course'>
             <div className='iconContainer'>

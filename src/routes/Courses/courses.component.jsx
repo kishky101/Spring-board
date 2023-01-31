@@ -1,10 +1,15 @@
+import { useContext } from 'react';
+import { CourseContext } from '../../context/courses/courses.context';
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
 import CourseContainer from '../../components/course-container/course-container.component';
 import CourseCard from '../../components/course-card/course-card.component';
-import courses from '../../courses';
 import './courses.styles.scss'
 
 const Courses = () => {
+
+    const course = useContext(CourseContext);
+    const {courses} = course
+
     return (
         <div>
             <RoutesHero />

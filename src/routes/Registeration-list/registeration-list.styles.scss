@@ -1,0 +1,25 @@
+.registeration-list-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    table {
+        border:1px solid var(--light-brown-clr);
+        width:90%; 
+        margin:50px;
+        text-align: center;
+        
+
+        tr, td, th {
+            border:1px solid;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+    }
+
+}
