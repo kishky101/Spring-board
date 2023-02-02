@@ -16,8 +16,8 @@ const Staff = () => {
             <RoutesHero />
             <div className="staff-intro-container">
                 <div className="staff-intro">
-                    <h2>our staffs</h2>
-                    <p>We have the best members of staffs in the world. Meet our experienced and qualified staffs.</p>
+                    <h2>our faculty Members</h2>
+                    <p>We have the best faculty members in the world. Meet our experienced and qualified faculty members.</p>
                 </div>
                 <div>
                     {staff.map(staff => <StaffCard staffObj={staff} key={staff.name} />)}

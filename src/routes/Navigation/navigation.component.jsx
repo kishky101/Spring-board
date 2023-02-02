@@ -35,7 +35,7 @@ const Navigation = () => {
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='About'>About Us</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Programs'>Programs</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Courses'>Courses</NavLink>
-                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Staff'>Staffs</NavLink>
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Staff'>Faculty Members</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Contact'>Contact Us</NavLink>
                     <Link onClick={closeNav} className='nav-link' to='Register'>
                         <Button children={'Register'} buttonType='register' type='button'/>

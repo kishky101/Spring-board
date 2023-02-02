@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import {useNavigate} from 'react-router-dom'
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 import { SignInUserWithEmailAndPassword, onAuthStateChangedListener } from '../../utils/firebase/firebase.utils';
+import { UserContext } from '../../context/user/user.context';
 import './sign-in.styles.scss';
 
 const defaultFields = {
@@ -13,7 +14,11 @@ const defaultFields = {
 const SignIn = () => {
     const navigate = useNavigate()
     const [formFields, setFormFields] = useState(defaultFields);
-    const [user, setUser] = useState(null)
+    
+
+    const userContext = useContext(UserContext);
+    const { user } = userContext;
+    console.log(user)
 
     const {email, password} = formFields;
 
@@ -27,7 +32,9 @@ const SignIn = () => {
 
     const signInonSubmitHandler = async (event) => {
         if (!email || !password) return;
+
         event.preventDefault()
+
         try {
             const { user } = await SignInUserWithEmailAndPassword(email, password)
             clearFormFields();
@@ -43,18 +50,15 @@ const SignIn = () => {
                     console.log(error)
                 
             }
-        }
-        
+        } 
     }
 
     
     useEffect(() => {
         const unSubscribe = onAuthStateChangedListener((user) => {
             if (user) {
-                 setUser(user)
                  navigate('/admin/register-list')
             }
-           
         })
 
         return unSubscribe

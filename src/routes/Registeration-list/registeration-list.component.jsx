@@ -1,13 +1,24 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import {redirect, useNavigate} from 'react-router-dom'
 import { RegisterationContext } from '../../context/registeration/registeration.context'
+import { UserContext } from '../../context/user/user.context';
 import RegisterUserCard from '../../components/registered-user-card/registered-user-card.component'
 import AdminNav from '../../components/admin-nav/admin-nav.component';
 import './registeration-list.styles.scss'
 
 const RegisterationList = () => {
-
+    const navigate = useNavigate();
     const registerContext = useContext(RegisterationContext);
-    const {register} = registerContext
+    const {register} = registerContext;
+    const userContext = useContext(UserContext);
+    const {user} = userContext;
+
+    useEffect(() => {
+        if (user === null) {
+            return navigate('/admin');
+        }
+    })
+    
 
     return (
         <div className='registeration-list-container'>

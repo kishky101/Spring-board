@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { UserContext } from '../../context/user/user.context';
 import { ContactContext } from '../../context/contact/contact.context';
 import MessageCard from '../../components/mesage-card/message-card.component';
 import AdminNav from '../../components/admin-nav/admin-nav.component';
@@ -8,6 +9,15 @@ const Message = () => {
 
     const MessageContext = useContext(ContactContext);
     const {contacts} = MessageContext
+    const userContext = useContext(UserContext);
+    const {user} = userContext;
+
+    useEffect(() => {
+        if (user === null) {
+            return navigate('/admin');
+        }
+    })
+    
 
     return (
         <div className='registeration-list-container'>
