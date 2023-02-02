@@ -190,7 +190,7 @@ const Register = () => {
                         value={sponsor}
                         onChange={onChangeHandler}
                     />
-                    <label className='register-label' htmlFor='agreement'>* I understand that I will have to pay N20,000/term OR $50  OR 45 Euro OR 40 UK pound/term to  confirm  my registration to any of the accounts below:  </label>
+                    <label className='register-label' htmlFor='agreement'>* I understand that I will have to pay N30,000/term OR $60  OR 55 Euro OR 50 UK pound/term to  confirm  my registration to any of the accounts below:  </label>
                         <FormInput 
                             label={'YES'}
                             type='checkbox'
