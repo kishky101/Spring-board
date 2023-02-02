@@ -55,21 +55,21 @@ const Payment = () => {
                                 <td>US Dollar:</td>
                                 <td>
                                 <ClipboardCopy copyText={'0603687467'} />
-                                <span>(65 dollars)</span>
+                                <span>(60 dollars)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Euro:</td>
                                 <td>
                                 <ClipboardCopy copyText={'0603687481'} />
-                                <span>(60 Euros)</span>
+                                <span>(55 Euros)</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>UK Pound:</td>
                                 <td>
                                 <ClipboardCopy copyText={'0603687474'} />
-                                <span>(55 Pounds)</span>
+                                <span>(50 Pounds)</span>
                                 </td>
                             </tr>
                         </tbody>
