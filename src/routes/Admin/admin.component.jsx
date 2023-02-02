@@ -9,13 +9,7 @@ const Admin = () => {
 
     return (
         <div className='admin-container'>
-            <div className='admin-button'>
-                <Button onClick={() => navigate('/admin/register-list')}>Register</Button>
-                <Button onClick={() => navigate('/admin/messages')}>Messages</Button>
-            </div>
-
             <Outlet />
-
         </div>
     )
 }

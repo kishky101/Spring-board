@@ -14,7 +14,7 @@ const Navigation = () => {
     const closeNav = () => setChecked(false)
 
     return (
-        <>
+        <div className="nav-container">
             <div className='navigation'>
                 <div className='logo'>
                     <Link to='/'>
@@ -40,11 +40,16 @@ const Navigation = () => {
                     <Link onClick={closeNav} className='nav-link' to='Register'>
                         <Button children={'Register'} buttonType='register' type='button'/>
                     </Link>
-                </div>   
+                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link admin-link1`} to='Admin'>Admin</NavLink>
+                </div> 
+                
             </div>
-            <Outlet />
+            <div>
+                <Outlet />
+            </div>
+            
             <Footer />
-        </>
+        </div>
     )
 }
 

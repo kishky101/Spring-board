@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { RegisterationContext } from '../../context/registeration/registeration.context'
 import RegisterUserCard from '../../components/registered-user-card/registered-user-card.component'
-
+import AdminNav from '../../components/admin-nav/admin-nav.component';
 import './registeration-list.styles.scss'
 
 const RegisterationList = () => {
@@ -11,6 +11,7 @@ const RegisterationList = () => {
 
     return (
         <div className='registeration-list-container'>
+            <AdminNav />
             <table>
                 <thead>
                     <tr>

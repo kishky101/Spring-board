@@ -1,0 +1,32 @@
+.sign-in-container {
+
+    .sign-in-description {
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--header-text-clr);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            opacity: .6;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+
+    .admin-sign-in {
+        border: 3px solid var(--light-brown-clr);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 1rem;
+        max-width: 500px;
+        height: auto;
+        box-shadow: 3px 5px 2px var(--light-brown-clr) inset, 
+        -3px -3px 2px var(--light-brown-clr) inset;
+    }
+}

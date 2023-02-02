@@ -10,9 +10,12 @@ import Register from './routes/Register/register.component'
 import Payment from './routes/Payment/payment.component'
 import RegisterationList from './routes/Registeration-list/registeration-list.component'
 import Message from './routes/mesages/messages.component'
+import Admin from './routes/Admin/admin.component'
+import Auth from './routes/Auth/auth.component'
 
 import './App.scss'
-import Admin from './routes/Admin/admin.component'
+import SignIn from './components/sign-in/sign-in.component'
+
 
 
 
@@ -40,10 +43,11 @@ function App() {
         <Route path='register' element={<Register />} />
         <Route path='payment' element={<Payment />} />
         <Route path='admin' element={<Admin />}>
+          <Route index element={<Auth />} />
+          <Route path='sign-in' element={<SignIn />} />
           <Route path='register-list' element={<RegisterationList />} />
           <Route path='messages' element={<Message />} />
         </Route>
-
       </Route>
     </Routes>
   )

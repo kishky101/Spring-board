@@ -1,6 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { 
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged 
+} from "firebase/auth";
+import { 
     getFirestore, 
     collection, 
     addDoc, 
@@ -74,9 +81,30 @@ export const createUserRegistrationDocument = async (userObj, collection, additi
                 ...additionalInformation
             });
         } catch (error) {
-            console.log('An Error occured', error.message)
+            console.log('An Error occured', error.message);
         }
     }
 
     return userSnapShot;
 }
+
+
+//AUTHENTICATION START
+
+export const auth = getAuth();
+
+export const CreatAuthUserFromEmailAndPassword = async (email, password) => {
+    if (!email || !password) return;
+
+    return await createUserWithEmailAndPassword(auth, email, password);
+}
+
+export const SignInUserWithEmailAndPassword = async (email, password) => {
+    if (!email || !password) return;
+
+    return await signInWithEmailAndPassword(auth, email, password);
+} 
+
+export const SignOutUser = async () => signOut(auth);
+
+export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
