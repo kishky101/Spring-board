@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { UserContext } from '../../context/user/user.context';
 import { ContactContext } from '../../context/contact/contact.context';
 import MessageCard from '../../components/mesage-card/message-card.component';
