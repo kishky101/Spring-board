@@ -5,21 +5,24 @@ import FormInput from "../../components/form-input/form-input.component";
 import Button from "../../components/button/button.component";
 import GetInTouch from "../../components/get-in-touch/get-in-touch.component";
 import { createUserRegistrationDocument } from "../../utils/firebase/firebase.utils";
-import './contact.styles.scss'
+import { about } from "../../utils/firebase/firebase.utils";
+
+import './review.styles.scss'
+
 
 const defaultFields = {
     firstName: '',
     lastName: '',
-    email: '',
-    number: '',
-    message: ''
+    occupation: '',
+    image: '',
+    review: ''
 }
 
-const Contact = () => {
+const Review = () => {
     const navigate = useNavigate();
-    const [formFields, setFormFields] = useState(defaultFields);
+    const [formFields, setFormFields] = useState(defaultFields)
 
-    const {firstName, lastName, email, number, message}  = formFields;
+    const {firstName, lastName, occupation, image, review}  = formFields;
     const fullName = `${firstName} ${lastName}`
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
@@ -27,18 +30,25 @@ const Contact = () => {
         setFormFields({...formFields, [name]: value, fullName})
     }
 
+    const imageHandler = (event) => {
+        const file = event.target.files[0];
+        console.log(file)
+        return about(fullName, file)
+    }
+
     const clearFormFields = () => setFormFields(defaultFields)
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        if(!firstName || !lastName || !email || !number || !message) {
+        if (!firstName || !lastName || !review) {
             alert('All fields are required')
             return
         }
-        const userDocRef = createUserRegistrationDocument(formFields, 'Contact Form', undefined, 'fullName')
+        
+        const userDocRef = createUserRegistrationDocument(formFields, 'Testimonials', undefined, 'fullName')
         console.log(userDocRef)
         clearFormFields()
-        return navigate('/contact-successful')
+        return navigate('/successful')
     }
 
     return (
@@ -66,35 +76,35 @@ const Contact = () => {
                             onChange={onChangeHandler}
                         />
                         <FormInput 
-                            label={'Email Address'}
-                            type='email'
-                            name='email'
-                            required
-                            value={email}
+                            label={'Occupation'}
+                            type='text'
+                            name='occupation'
+                            value={occupation}
                             onChange={onChangeHandler}
                         />
-                        <FormInput 
-                            label={'Tel. Number'}
-                            type='tel'
-                            name='number'
-                            required
-                            value={number}
-                            onChange={onChangeHandler}
-                        />
+                        <div className="image-area">
+                            <label>Upload a profile Image (Optional)</label>
+                            <input
+                                type='file'
+                                name='image'
+                                id="image"
+                                onChange={imageHandler}
+                            />
+                        </div>
                         <div className="message-textarea">
-                            <label>Message</label>
+                            <label>Leave your review or testimonial</label>
                             <textarea 
                                 type='textarea'
-                                name='message'
+                                name='review'
                                 rows={5}
                                 required
-                                value={message}
+                                value={review}
                                 onChange={onChangeHandler}
                             ></textarea> 
                         </div>
 
 
-                        <Button onClick={onSubmitHandler} type='submit'>Send Message</Button>
+                        <Button onClick={onSubmitHandler} type='submit'>Submit</Button>
                     </form>
                 </div>
             </div>
@@ -103,4 +113,4 @@ const Contact = () => {
     )
 }
 
-export default Contact;
+export default Review;

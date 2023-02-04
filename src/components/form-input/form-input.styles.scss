@@ -40,6 +40,10 @@ $main-color: black;
     letter-spacing: 0.3em;
   }
 
+  input[type='file'] {
+    
+  }
+
   input[type='checkbox'], input[type='radio'] {
     position: absolute;
     top: -35px;

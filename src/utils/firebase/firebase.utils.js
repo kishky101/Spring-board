@@ -19,6 +19,7 @@ import {
     query
 
 } from "firebase/firestore";
+import {getStorage, ref, uploadBytes} from 'firebase/storage'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -108,3 +109,17 @@ export const SignInUserWithEmailAndPassword = async (email, password) => {
 export const SignOutUser = async () => signOut(auth);
 
 export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
+
+
+//STORAGE START
+
+export const storage = getStorage();
+
+export const about =(name, file) => {
+    const imageRef = ref(storage, name)
+
+    return uploadBytes(imageRef, file).then((snapshot) => {
+        console.log(snapshot, 'Uploaded a blob or file!');
+    }).catch(error => console.log(error)) ;
+} 
+
