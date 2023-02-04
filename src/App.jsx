@@ -16,13 +16,18 @@ import Auth from './routes/Auth/auth.component'
 import './App.scss'
 import SignIn from './components/sign-in/sign-in.component'
 
-
+// import { useEffect } from 'react'
+// import { SendMail } from './utils/mailtrap/mailtrap.utils'
 
 
 function App() {
 
+  
+
+  
+
   // useEffect(() => {
-  //   addDocToFirebase('courses', courses);
+  //   SendMail()
   // }, [])
 
   // useEffect(() => {

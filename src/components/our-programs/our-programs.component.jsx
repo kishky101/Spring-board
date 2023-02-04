@@ -18,7 +18,7 @@ const OurPrograms = () => {
                     </div>
                     <div className='our-program-description'>
                         <h3>weekdays program</h3>
-                        <p>Online classes on <span>Mondays to Wednesdays</span></p>
+                        <p>Online classes on <span>Mondays to Fridays</span></p>
                     </div>
                 </div>
                 <div className='our-program-schedule'>

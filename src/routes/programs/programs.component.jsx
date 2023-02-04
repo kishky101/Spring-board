@@ -1,6 +1,9 @@
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
+import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
 import CustomSpan from '../../components/custom-span/custom-span.component';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import './programs.styles.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Programs = () => {
     return (
@@ -27,7 +30,57 @@ const Programs = () => {
                         </li>
                     </ul>
                 </div>
+                <div className='platforms'>
+                    <h3>Platform</h3>
+                    <div className='platform-card-container'>
+                        <div className='platform-card'>
+                            <div className='platform-image'>
+                                <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/zoom-icon.png' />
+                                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/934px-Google_Meet_icon_%282020%29.svg.png' />
+                            </div>
+                            <h4>Zoom & Google Meet</h4>
+                            <hr />
+                            <p>
+                                We currently run our classes on licensed zoom application and Google meet.
+                            </p>
+                        </div>
+                        <div className='platform-card'>
+                            <div className='platform-image'>
+                                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png' />
+                            </div>
+                            <h4>WhatsApp</h4>
+                            <hr />
+                            <p> We support the zoom class with WhatsApp groups for sharing of materials and information. We also use the group platform for assignments and other related joint activities. At the end of each term, students are subjected to comprehensive assessments.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div className='days-of-operation'>
+                    <h3>Days of Operation</h3>
+                    <div className='days-box-container'>
+                        <div className='days-box'>
+                            <h6>WEEKDAYS</h6>
+                            <hr />
+                            <p>
+                                <span>Mondays <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                                <span>Tuesdays <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                                <span>Wednesdays <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                                <span>Thursdays (Basic Only) <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                                <span>Fridays (Basic Only) <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                            </p>
+                        </div>
+                        <div className='days-box'>
+                            <h6>WEEKENDS</h6>
+                            <hr />
+                            <p>
+                                <span>Saturdays <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                                <span>Sundays <FontAwesomeIcon icon={faCheckCircle} className='icon' /> </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <GetInTouch />
         </div>
     )
 }

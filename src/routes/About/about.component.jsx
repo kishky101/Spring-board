@@ -1,5 +1,6 @@
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
 import CustomSpan from '../../components/custom-span/custom-span.component';
+import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
 
 import './about.styles.scss';
 
@@ -52,6 +53,7 @@ const About = () => {
                     </ul>
                 </div>
             </div>
+            <GetInTouch />
         </div>
     )
 }

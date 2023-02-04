@@ -58,6 +58,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+
+        button {
+            color: var(--light-brown-clr);
+            font-size: 2rem;
+            position: relative;
+            right: 2rem;
+
+            &:has(.expand-button:not(:checked)) {
+
+                .collapse {
+                    display: none;
+                }
+            }
+            &:has(.expand-button:checked) {
+
+                .expand {
+                    display: none;
+                }
+            }
+
+            .expand, .collapse {
+                position: absolute;
+            }
+        }
     }
 
     .courseIntro {
@@ -65,14 +89,14 @@
         --line-height: 1.7;
         font-family: "Open sans", sans-serif;
         opacity: .5;
-        letter-spacing: .7px;
+        letter-spacing: .2px;
         font-size: 1.2rem;
         line-height: var(--line-height);
         max-height: calc(var(--max-lines) * 1rem * var(--line-height));
         overflow: hidden;
         position: relative;
 
-        &:has(+ .expand-button:not(:checked))::before {
+        &:has(+ button .expand-button:not(:checked))::before {
             content: '';
             position: absolute;
             height: calc(1rem * var(--line-height));
@@ -81,8 +105,9 @@
             pointer-events: none;
             background: linear-gradient(to bottom, transparent, #E9E9E9);
         }
+        
 
-        &:has(+ .expand-button:checked) {
+        &:has(+ button .expand-button:checked) {
             max-height: none;
         }
     }
@@ -95,18 +120,12 @@
         cursor: pointer;
         opacity: .5;
         font-family: "Open sans", sans-serif;
+        position: absolute;
         
         &:hover {
             background-color: rgba(145, 123, 90 , .3);
         }
 
-        &::before {
-            content: 'Expand';
-        }
-
-        &:checked::before {
-            content: 'collapse';
-        }
     }
 
 

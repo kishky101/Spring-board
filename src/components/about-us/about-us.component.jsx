@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className='about-us-texts'>
                 <div className='about-us-text-wrapper'>
                     <h2 className='about-us-header'>About us</h2>
-                    <h3 className='about-us-header2'>We have all compiled materials and trained tutors</h3>
+                    <h3 className='about-us-header2'>We have mordern and seasoned tutors</h3>
                     <p className='about-us-description'>Springboard Language Academy is a reputable online language academy that offers international language services ranging from training, translation, communication among other related activities...
                     <Link style={{color: 'black', textDecoration: 'underline', fontSize: '14px'}} to='About'>Read More</Link>
                     </p>

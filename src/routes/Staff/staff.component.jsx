@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { StaffContext } from "../../context/staff/staff.context"
 import RoutesHero from "../../components/routes-hero/routes-hero.component"
+import GetInTouch from "../../components/get-in-touch/get-in-touch.component"
 import StaffCard from "../../components/staff-card/staff-card.component"
 
 import './staff.styles.scss'
@@ -24,7 +25,7 @@ const Staff = () => {
                 </div>
             </div>
 
-            
+            <GetInTouch />
         </div>
     )
 }
