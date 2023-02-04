@@ -55,8 +55,8 @@ const Review = () => {
         <div className="contact-form-container">
             <RoutesHero />
             <div className="contact-form">
-                <h2>Contact us now</h2>
-                <p>You can leave us a message by filling the below form. You can also dial our hotline written below.</p>
+                <h2>Leave us a Review</h2>
+                <p>You can leave us a review by filling the below form.</p>
                 <div className="contact-form-fields">
                     <form>
                         <FormInput 
