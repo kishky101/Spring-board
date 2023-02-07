@@ -1,15 +1,11 @@
-import { useContext } from 'react';
-import { CourseContext } from '../../context/courses/courses.context';
+
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../utils/framer-motion/framer';
 import CourseCard from '../course-card/course-card.component';
 import './course-container.styles.scss';
 
-const CourseContainer = () => {
+const CourseContainer = ({children}) => {
 
-    
-    const course = useContext(CourseContext);
-    const {courses} = course
 
     return (
         <motion.div
@@ -23,7 +19,7 @@ const CourseContainer = () => {
             <motion.div
             layout='position'
             className='course-wrapper'>
-                {courses.map(course => <CourseCard course={course} key={course.id}/> )}
+                {children}
             </motion.div>
         </motion.div>
         

@@ -5,6 +5,9 @@ import FormInput from "../../components/form-input/form-input.component";
 import Button from "../../components/button/button.component";
 import GetInTouch from "../../components/get-in-touch/get-in-touch.component";
 import { createUserRegistrationDocument } from "../../utils/firebase/firebase.utils";
+import ProgressBar from "../../components/progress-bar/progress-bar.component";
+import { motion } from "framer-motion";
+import { scaleIn, fadeIn } from "../../utils/framer-motion/framer";
 import './contact.styles.scss'
 
 const defaultFields = {
@@ -42,11 +45,22 @@ const Contact = () => {
 
     return (
         <div className="contact-form-container">
+            <ProgressBar />
             <RoutesHero />
-            <div className="contact-form">
+            <motion.div
+            initial='hidden'
+            whileInView='show'
+            variants={fadeIn('up', 0)}
+            viewport={{once: false}}
+            className="contact-form">
                 <h2>Contact us now</h2>
                 <p>You can leave us a message by filling the below form. You can also dial our hotline written below.</p>
-                <div className="contact-form-fields">
+                <motion.div
+                initial='hidden'
+                whileInView='show'
+                variants={scaleIn('up', 0)}
+                viewport={{once: false}}
+                className="contact-form-fields">
                     <form>
                         <FormInput 
                             label={'First Name'}
@@ -95,8 +109,8 @@ const Contact = () => {
 
                         <Button onClick={onSubmitHandler} type='submit'>Send Message</Button>
                     </form>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
             <GetInTouch />
         </div>
     )

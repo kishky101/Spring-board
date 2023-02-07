@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+import { scaleIn } from '../../utils/framer-motion/framer';
+
 import './staff-card.styles.scss'
 
 
@@ -6,7 +9,12 @@ const StaffCard = ({staffObj}) => {
     const {name, imageUrl, description} = staffObj;
 
     return (
-        <div className='staff-card-container'>
+        <motion.div
+        initial='hidden'
+        whileInView='show'
+        variants={scaleIn('up', 0)}
+        viewport={{once: false}}
+        className='staff-card-container'>
             <div className='staff-card-img'>
                 <img src={imageUrl} alt='staff Image' />
             </div>
@@ -16,7 +24,7 @@ const StaffCard = ({staffObj}) => {
                 </div>
                 <p>{description}</p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

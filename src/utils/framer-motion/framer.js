@@ -45,7 +45,7 @@ export const scaleIn = (direction, delay) => {
         scale: 1,
         transition: {
           type: 'tween',
-          duration: 1.2,
+          duration: .5,
           delay: delay,
           ease: [0.25, 0.25, 0.25, 0.75],
         },

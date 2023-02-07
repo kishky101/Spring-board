@@ -8,9 +8,7 @@ import './get-started.styles.scss'
 const GetStarted = () => {
 
     return(
-        <div
-
-        className='get-started-container'>
+        <div className='get-started-container'>
             <motion.div
             initial='hidden'
             whileInView='show'
