@@ -45,8 +45,7 @@ const Review = () => {
             return
         }
         
-        const userDocRef = createUserRegistrationDocument(formFields, 'Testimonials', undefined, 'fullName')
-        console.log(userDocRef)
+        const userDocRef = createUserRegistrationDocument(formFields, 'Testimonials', undefined, 'fullName');
         clearFormFields()
         return navigate('/successful')
     }

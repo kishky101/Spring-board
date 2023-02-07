@@ -5,7 +5,8 @@ import Footer from "../../components/footer/footer.component";
 import { faXmark, faBars, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import './navigation.styles.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/framer-motion/framer";
 
 const Navigation = () => {
     const [checked, setChecked] = useState(false);
@@ -30,7 +31,8 @@ const Navigation = () => {
                         <input type="checkbox" id="dropdown" readOnly checked = {checked}/>
                     </button>
                 </div>
-                <div className='nav-links'>
+                <div
+                className='nav-links'>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='/'>Home</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='About'>About Us</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Programs'>Programs</NavLink>

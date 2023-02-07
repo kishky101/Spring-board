@@ -1,16 +1,33 @@
 import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../utils/framer-motion/framer';
 
 import './get-in-touch.styles.scss'
 
 const GetInTouch = () => {
 
     return (
-        <div className='get-in-touch-container'>
-            <div className='get-in-touch-header'>
+        <motion.div
+        initial='hidden'
+        whileInView='show'
+        variants={fadeIn('up', 0)}
+        viewport={{once: false}}
+        className='get-in-touch-container'>
+            <motion.div
+            initial='hidden'
+            whileInView='show'
+            variants={fadeIn('down', 0.01)}
+            viewport={{once: false}}
+            className='get-in-touch-header'>
                 <h3>Get in touch with us</h3>
-            </div>
-            <div className='get-in-touch-details-container'>
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            whileInView='show'
+            variants={fadeIn('up', 0.02)}
+            viewport={{once: false}}
+            className='get-in-touch-details-container'>
                 <div className='get-in-touch-details'>
                     <span className='get-in-touch-span'>
                         <FontAwesomeIcon icon={faEnvelope} className='get-in-touch-icon' />
@@ -25,8 +42,8 @@ const GetInTouch = () => {
                         +2348033938927
                     </span>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

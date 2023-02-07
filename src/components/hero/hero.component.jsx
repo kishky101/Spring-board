@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from '../button/button.component';
+import { easeInOut, motion, AnimatePresence } from 'framer-motion';
+import { fadeIn } from '../../utils/framer-motion/framer';
 
 import './hero.styles.scss'
 
@@ -8,14 +10,36 @@ const Hero = () => {
 
     return (
         <header className='hero-section'>
-            <div className='hero-text-container'>
-                <h1>Springboard Language Academy</h1>
-                <p>Bridge the communication gaps among nations through professional language trainings.</p>
-                <div className='hero-buttons'>
-                    <Link to='Register'><Button>Register Now</Button></Link>
-                    <Link to='Contact'><Button buttonType={'defaultTrans'}>Contact Us</Button></Link>
-                </div>
-            </div>
+            <AnimatePresence>
+                <motion.div
+                initial='hidden'
+                whileInView='show'
+                variants={fadeIn('up', 0)}
+                viewport={{once: false}}
+                className='hero-text-container'>
+                    <motion.h1
+                    initial='hidden'
+                    whileInView='show'
+                    variants={fadeIn('up', 0.1)}
+                    viewport={{once: false}}
+                    >Springboard Language Academy</motion.h1>
+                    <motion.p
+                    initial='hidden'
+                    whileInView='show'
+                    variants={fadeIn('up', 0.2)}
+                    viewport={{once: false}}
+                    >Bridge the communication gaps among nations through professional language trainings.</motion.p>
+                    <motion.div
+                    initial='hidden'
+                    whileInView='show'
+                    variants={fadeIn('up', 0.3)}
+                    viewport={{once: false}}
+                    className='hero-buttons'>
+                        <Link to='Register'><Button>Register Now</Button></Link>
+                        <Link to='Contact'><Button buttonType={'defaultTrans'}>Contact Us</Button></Link>
+                    </motion.div>
+                </motion.div>
+            </AnimatePresence>
         </header>
     )
 }

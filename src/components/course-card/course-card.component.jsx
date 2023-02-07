@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 import { faCircleMinus, faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-
+import { motion } from "framer-motion";
+import { scaleIn } from "../../utils/framer-motion/framer";
 import './course-card.styles.scss'
+
 const CourseCard = ({course}) => {
     const [icon, setIcon] = useState({})
     const {courseName, iconClass, courseIntro} = course;
@@ -12,7 +14,13 @@ const CourseCard = ({course}) => {
     })
        
     return (
-        <div className='course'>
+        <motion.div
+        layout='size'
+        initial='hidden'
+        whileInView='show'
+        variants={scaleIn('up', 0.1)}
+        viewport={{once: false}}
+        className='course'>
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={icon} className='icon'/>
             </div>
@@ -27,7 +35,7 @@ const CourseCard = ({course}) => {
                 </button>   
             </div>
             
-        </div>
+        </motion.div>
     )
 }
 

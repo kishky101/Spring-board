@@ -1,14 +1,31 @@
 import { Link } from 'react-router-dom'
 import Button from '../button/button.component'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../utils/framer-motion/framer'
 import './about-us.styles.scss'
 
 const AboutUs = () => {
     return (
-        <div className='about-us'>
-            <div className='about-us-img-container'>
+        <motion.div
+        initial='hidden'
+        whileInView='show'
+        variants={fadeIn('up', 0)}
+        viewport={{once: false}}
+        className='about-us'>
+            <motion.div
+            initial='hidden'
+            whileInView='show'
+            variants={fadeIn('left', 0.1)}
+            viewport={{once: false}}
+            className='about-us-img-container'>
                 <img src='https://i.postimg.cc/kMwWCzc3/about-us-img.png' alt='about-us-img' className='about-us-img' />
-            </div>
-            <div className='about-us-texts'>
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            whileInView='show'
+            variants={fadeIn('right', 0.1)}
+            viewport={{once: false}}
+            className='about-us-texts'>
                 <div className='about-us-text-wrapper'>
                     <h2 className='about-us-header'>About us</h2>
                     <h3 className='about-us-header2'>We have mordern and seasoned tutors</h3>
@@ -22,9 +39,9 @@ const AboutUs = () => {
                     </div>
 
                 </div>   
-            </div>
+            </motion.div>
            
-        </div>
+        </motion.div>
     )
 }
 
