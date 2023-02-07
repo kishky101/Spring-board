@@ -5,6 +5,7 @@ import { useState } from 'react';
 import testimonails from '../../testimonials';
 import TestimonialCard from '../testimonial card/testimonial-card.component';
 
+
 import 'swiper/scss';
 // import 'swiper/scss/navigation';
 // import 'swiper/scss/pagination';
@@ -20,7 +21,8 @@ const Testimonials = () => {
 
 
     return (
-        <div className='testimonial-container'>
+        <div
+        className='testimonial-container'>
             <div>
                 <h2 className='testimonial-header'>testimonials</h2>
                 <p className='testimonial-description'>Read what our students have to say about us</p>
