@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import sendEmail from '../../utils/emailJS/emailJS.utils';
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
 import FormInput from '../../components/form-input/form-input.component';
 import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
@@ -24,6 +25,7 @@ const defaultFields = {
 
 const Register = () => {
     const navigate = useNavigate();
+    const form = useRef()
     const [formFields, setFormFields] = useState(defaultFields)
     
     const {firstName, lastName, email, number, background, internet, days, agreement, sponsor}  = formFields;
@@ -45,8 +47,10 @@ const Register = () => {
         const userDocRef = createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
         console.log(userDocRef)
         clearFormFields()
+        sendEmail(formFields)
         return navigate("/payment")
     }
+
 
     return (
         <div className="register-form-container">
@@ -68,7 +72,7 @@ const Register = () => {
                 variants={scaleIn('up', 0)}
                 viewport={{once: false}}
                 className="register-form-fields">
-                    <form>
+                    <form ref={form} onSubmit={sendEmail}>
                         <FormInput 
                             label={'First Name*'}
                             type='text'

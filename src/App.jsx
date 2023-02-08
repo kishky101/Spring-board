@@ -16,8 +16,6 @@ import Review from './routes/review/review.component'
 
 import './App.scss'
 import SignIn from './components/sign-in/sign-in.component'
-import { about } from './utils/firebase/firebase.utils'
-import {uploadBytes} from 'firebase/storage'
 import Succesful from './routes/successful/successful.component'
 import ContactSuccesful from './routes/contact-successful/contact-successful.component'
 
@@ -32,7 +30,7 @@ function App() {
   
 
   // useEffect(() => {
-  //   SendMail()
+  
   // }, [])
 
   // useEffect(() => {
