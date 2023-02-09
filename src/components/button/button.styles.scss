@@ -10,6 +10,7 @@
     position: relative;
     z-index: 1;
     white-space: nowrap;
+    transition: transform 300ms ease-in-out;
     
     &::before {
         content: '';
@@ -21,9 +22,12 @@
         z-index: -1;
         background-color: var(--dark-green-clr);
         transform: scaleX(0);
-        transition: transform 300ms ease-in-out;
+        transition: transform 500ms ease-in-out;
     }
     
+    &:hover {
+        transform: scale(.9);
+    }
     
     &:hover::before {    
         transform: scaleX(1);
