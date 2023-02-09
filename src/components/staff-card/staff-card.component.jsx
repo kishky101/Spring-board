@@ -13,7 +13,7 @@ const StaffCard = ({staffObj}) => {
         initial='hidden'
         whileInView='show'
         variants={scaleIn('up', 0)}
-        viewport={{once: false}}
+        viewport={{once: true}}
         className='staff-card-container'>
             <div className='staff-card-img'>
                 <img src={imageUrl} alt='staff Image' />

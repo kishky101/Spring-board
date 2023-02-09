@@ -10,21 +10,21 @@ const AboutUs = () => {
         initial='hidden'
         whileInView='show'
         variants={fadeIn('up', 0)}
-        viewport={{once: false}}
+        viewport={{once: true}}
         className='about-us'>
             <motion.div
             initial='hidden'
             whileInView='show'
-            variants={fadeIn('left', 0.1)}
-            viewport={{once: false}}
+            variants={fadeIn('right', 0.1)}
+            viewport={{once: true}}
             className='about-us-img-container'>
                 <img src='https://i.postimg.cc/kMwWCzc3/about-us-img.png' alt='about-us-img' className='about-us-img' />
             </motion.div>
             <motion.div
             initial='hidden'
             whileInView='show'
-            variants={fadeIn('right', 0.1)}
-            viewport={{once: false}}
+            variants={fadeIn('left', 0.1)}
+            viewport={{once: true}}
             className='about-us-texts'>
                 <div className='about-us-text-wrapper'>
                     <h2 className='about-us-header'>About us</h2>

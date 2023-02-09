@@ -13,7 +13,7 @@ const GetStarted = () => {
             initial='hidden'
             whileInView='show'
             variants={scaleIn('up', 0.01)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className='get-started-text'>
                 <h3>get started now!</h3>
                 <p>Register for any of our interesting course now</p>

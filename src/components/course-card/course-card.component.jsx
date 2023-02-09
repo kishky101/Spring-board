@@ -19,7 +19,7 @@ const CourseCard = ({course}) => {
         initial='hidden'
         whileInView='show'
         variants={scaleIn('up', 0.1)}
-        viewport={{once: false}}
+        viewport={{once: true}}
         className='course'>
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={icon} className='icon'/>

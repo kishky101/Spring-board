@@ -12,13 +12,13 @@ const GetInTouch = () => {
         initial='hidden'
         whileInView='show'
         variants={fadeIn('up', 0)}
-        viewport={{once: false}}
+        viewport={{once: true}}
         className='get-in-touch-container'>
             <motion.div
             initial='hidden'
             whileInView='show'
             variants={fadeIn('down', 0.01)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className='get-in-touch-header'>
                 <h3>Get in touch with us</h3>
             </motion.div>
@@ -26,7 +26,7 @@ const GetInTouch = () => {
             initial='hidden'
             whileInView='show'
             variants={fadeIn('up', 0.02)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className='get-in-touch-details-container'>
                 <div className='get-in-touch-details'>
                     <span className='get-in-touch-span'>

@@ -16,13 +16,13 @@ const OurPrograms = () => {
         initial='hidden'
         whileInView='show'
         variants={fadeIn('up', 0)}
-        viewport={{once: false}}
+        viewport={{once: true}}
         className='our-program-container'>
             <motion.div
             initial='hidden'
             whileInView='show'
             variants={fadeIn('down', 0.1)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className='our-program-header'>
                 <h2>our <span>programs</span></h2>
             </motion.div>
@@ -30,8 +30,8 @@ const OurPrograms = () => {
                 <motion.div
                 initial='hidden'
                 whileInView='show'
-                variants={fadeIn('left', 0.1)}
-                viewport={{once: false}}
+                variants={fadeIn('right', 0.1)}
+                viewport={{once: true}}
                 className='our-program-schedule'>
                     <div className = 'program-icon-container'>
                         <FontAwesomeIcon icon={faCalendarDays} className = 'our-program-icon' />
@@ -44,8 +44,8 @@ const OurPrograms = () => {
                 <motion.div
                 initial='hidden'
                 whileInView='show'
-                variants={fadeIn('right', 0.1)}
-                viewport={{once: false}}
+                variants={fadeIn('left', 0.1)}
+                viewport={{once: true}}
                 className='our-program-schedule'>
                     <div className = 'program-icon-container'>
                         <FontAwesomeIcon icon={faCalendarXmark} className = 'our-program-icon' />

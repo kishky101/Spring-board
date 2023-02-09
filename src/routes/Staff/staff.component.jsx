@@ -22,7 +22,7 @@ const Staff = () => {
             initial='hidden'
             whileInView='show'
             variants={fadeIn('up', 0)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className="staff-intro-container">
                 <div className="staff-intro">
                     <h2>our faculty Members</h2>

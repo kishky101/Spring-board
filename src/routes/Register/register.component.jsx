@@ -45,7 +45,6 @@ const Register = () => {
             return
         }
         const userDocRef = createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
-        console.log(userDocRef)
         clearFormFields()
         sendEmail(formFields)
         return navigate("/payment")
@@ -60,7 +59,7 @@ const Register = () => {
             initial='hidden'
             whileInView='show'
             variants={fadeIn('up', 0)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className="register-form">
                 <h2>Register Now</h2>
                 <p>SpringBoard Language Academy Arabic Online Registeration Form.</p>
@@ -70,7 +69,7 @@ const Register = () => {
                 initial='hidden'
                 whileInView='show'
                 variants={scaleIn('up', 0)}
-                viewport={{once: false}}
+                viewport={{once: true}}
                 className="register-form-fields">
                     <form ref={form} onSubmit={sendEmail}>
                         <FormInput 

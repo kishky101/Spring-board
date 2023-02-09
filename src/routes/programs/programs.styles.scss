@@ -5,6 +5,7 @@
     align-items: center;
     margin-bottom: 60px;
     overflow-x: hidden;
+    width: auto;
 
     .program-text-container {
         width: 80%;
@@ -89,6 +90,7 @@
                 white-space: nowrap;
                 text-align: center;
                 margin-bottom: 2rem;
+                width: 100%;
             }
 
             .platform-card-container {

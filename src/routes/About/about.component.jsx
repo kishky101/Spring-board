@@ -17,7 +17,7 @@ const About = () => {
             initial='hidden'
             whileInView='show'
             variants={fadeIn('up', 0.01)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className='about-text-container'>
                 <div className='about-text'>
                     <h2 className='about-text-header'>About us</h2>
@@ -27,7 +27,7 @@ const About = () => {
                 initial='hidden'
                 whileInView='show'
                 variants={fadeIn('up', 0)}
-                viewport={{once: false}}
+                viewport={{once: true}}
                 className='about-text'>
                     <h2 className='about-text-header'>Our Vision</h2>
                     <p>To bridge the communication gaps among nations through professional language trainings, translation and other related services.</p>
@@ -36,14 +36,14 @@ const About = () => {
                 initial='hidden'
                 whileInView='show'
                 variants={fadeIn('up', 0)}
-                viewport={{once: false}}
+                viewport={{once: true}}
                 className='about-text'>
                     <h2 className='about-text-header'>Our Mission</h2>
                     <motion.ul
                     initial='hidden'
                     whileInView='show'
                     variants={fadeIn('up', 0.01)}
-                    viewport={{once: false}}
+                    viewport={{once: true}}
                     transition={{  
                         when: "beforeChildren",
                         staggerChildren: 0.3
@@ -53,7 +53,7 @@ const About = () => {
                         initial='hidden'
                         whileInView='show'
                         variants={fadeIn('right', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>01</CustomSpan>
                         <p>
                         Fulfilling the yearnings of the teaming Muslims who are passionate about learning the language of their revealed book.
@@ -63,7 +63,7 @@ const About = () => {
                         initial='hidden'
                         whileInView='show'
                         variants={fadeIn('left', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>02</CustomSpan>
                         <p>
                         Encouraging learning of Arabic for diverse purposes.
@@ -73,7 +73,7 @@ const About = () => {
                         initial='hidden'
                         whileInView='show'
                         variants={fadeIn('right', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>03</CustomSpan>
                         <p>
                         Engaging the service of professionals and trained tutors to achieve its goals.
@@ -83,7 +83,7 @@ const About = () => {
                         initial='hidden'    
                         whileInView='show'
                         variants={fadeIn('left', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>04</CustomSpan>
                         <p>
                         Taking advantage of modern technologies to break the barriers of space and time.
@@ -93,7 +93,7 @@ const About = () => {
                         initial='hidden'
                         whileInView='show'
                         variants={fadeIn('rigth', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>05</CustomSpan>
                         <p>
                         Making its services accessible to all and sundry via unlimited potentials available online.
@@ -103,7 +103,7 @@ const About = () => {
                         initial='hidden'
                         whileInView='show'
                         variants={fadeIn('left', 0.01)}
-                        viewport={{once: false}}
+                        viewport={{once: true}}
                         ><CustomSpan>06</CustomSpan>
                         <p>
                         Collaborating, adapting, and affiliating with institutions of higher learning both home and abroad to give its programs international touch.

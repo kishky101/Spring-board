@@ -51,7 +51,7 @@ const Contact = () => {
             initial='hidden'
             whileInView='show'
             variants={fadeIn('up', 0)}
-            viewport={{once: false}}
+            viewport={{once: true}}
             className="contact-form">
                 <h2>Contact us now</h2>
                 <p>You can leave us a message by filling the below form. You can also dial our hotline written below.</p>
@@ -59,7 +59,7 @@ const Contact = () => {
                 initial='hidden'
                 whileInView='show'
                 variants={scaleIn('up', 0)}
-                viewport={{once: false}}
+                viewport={{once: true}}
                 className="contact-form-fields">
                     <form>
                         <FormInput 
