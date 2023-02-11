@@ -28,7 +28,7 @@ const message = `
 </div>
 `
 const templatePrams = {
-  to_name: '',
+  to_name: 'Admin',
   from_name: 'Springboard Language Academy',
   message: message
 }
