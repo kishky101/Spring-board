@@ -18,7 +18,7 @@ const Navigation = () => {
         <div className="nav-container">
             <div className='navigation'>
                 <div className='logo'>
-                    <Link to='/'>
+                    <Link to='/' onClick={closeNav}>
                         <h2><span className='logo-first'>Spring</span><span className='logo-last'>Board</span></h2>
                     </Link>
                     <button className ="hamburger-icon">
@@ -33,7 +33,7 @@ const Navigation = () => {
                 </div>
                 <div
                 className='nav-links'>
-                    <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='/'>Home</NavLink>
+                    {/*<NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='/'>Home</NavLink>*/}
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='About'>About Us</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Programs'>Programs</NavLink>
                     <NavLink onClick={closeNav} className={`{({isActive}) => isActive ? 'active': ''} nav-link`} to='Courses'>Courses</NavLink>
