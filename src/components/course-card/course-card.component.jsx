@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { faCircleMinus, faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { scaleIn } from "../../utils/framer-motion/framer";
@@ -26,10 +26,6 @@ const CourseCard = ({course}) => {
     }
 
 
-    useEffect(() => {
-        import("@fortawesome/free-solid-svg-icons").then((res) => setIcon(res[iconClass]));
-    })
-
     //1 . https://images.unsplash.com/photo-1609599006353-e629aaabfeae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
     //2 . https://c4.wallpaperflare.com/wallpaper/71/282/336/islam-arabic-hd-wallpaper-preview.jpg
     //3 . https://images.unsplash.com/photo-1618383406944-0df8186c3aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80
@@ -47,7 +43,6 @@ const CourseCard = ({course}) => {
         className='course' onClick={heightHandler}>
             <div className='iconContainer'>
                 <img src={imageUrl} />
-                {/*<FontAwesomeIcon icon={icon} className='icon'/>*/}
             </div>
             <h2 className='courseTitle'>{courseName}</h2>  
             <div className="demo-div">
