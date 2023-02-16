@@ -14,7 +14,7 @@ const defaultFields = {
     firstName: '',
     lastName: '',
     occupation: '',
-    image: '',
+    //image: '',
     review: ''
 }
 
