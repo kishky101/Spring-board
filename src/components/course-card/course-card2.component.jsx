@@ -52,12 +52,6 @@ const CourseCard2 = ({course}) => {
                 
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }} className='courseIntro' ref={pRef}><Button onClick={() => navigate('/courses')} buttonType={'defaultWhite'}>View All courses</Button></div>
                 
-                <button>
-                    
-                    {!isChecked && <FontAwesomeIcon icon={faCirclePlus} className='expand' />}
-                    {isChecked && <FontAwesomeIcon icon={faCircleMinus} className='collapse' />}
-                    <input type={'checkbox'} onChange={inputHandler} className='expand-button' ref={inputRef} />
-                </button>   
             </div>
             
         </motion.div>
