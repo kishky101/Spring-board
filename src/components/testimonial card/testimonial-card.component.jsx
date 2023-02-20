@@ -5,7 +5,7 @@ import './testimonial-card.styles.scss'
 
 const TestimonialCard = ({testimonialObj}) => {
 
-    const {name, imageUrl,proffesion, testimony} = testimonialObj;
+    const {fullName, imageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxtQY4XgXm3IWNY5Zfu6a9IGjupJuHFZpAS_VuUmLBBzihM2TSpdjaWXpsn3DmXaVb65o&usqp=CAU', occupation, review} = testimonialObj;
     return (
         <motion.div
         initial='hidden'
@@ -18,10 +18,10 @@ const TestimonialCard = ({testimonialObj}) => {
             </div>
             <div className='testimonial-card'>
                 <div>
-                    <h3>{name}</h3>
-                    <span>{proffesion}</span>
+                    <h3>{fullName}</h3>
+                    <span>{occupation}</span>
                 </div>
-                <p>{testimony}</p>
+                <p>{review}</p>
             </div>
         </motion.div>
     )

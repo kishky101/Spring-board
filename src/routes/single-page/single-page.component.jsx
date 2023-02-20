@@ -10,7 +10,7 @@ import GetInTouch from "../../components/get-in-touch/get-in-touch.component";
 import ProgressBar from "../../components/progress-bar/progress-bar.component";
 import "./single-page.styles.scss";
 import CourseCard from "../../components/course-card/course-card.component";
-
+import CourseCard2 from "../../components/course-card/course-card2.component";
 const Page = () => {
   const course = useContext(CourseContext);
   const { courses } = course;
@@ -22,9 +22,14 @@ const Page = () => {
       <OurPrograms />
       <AboutUs />
       <CourseContainer>
-        {courses.map((course) => (
-          <CourseCard course={course} key={course.id} />
-        ))}
+        {courses.map((course) => {
+          if (course.id !== 6) {
+            return <CourseCard course={course} key={course.id} />
+          }else {
+            return <CourseCard2 course={course} key={course.id} />
+          }
+          
+        })}
       </CourseContainer>
       <Testimonials />
       <GetStarted />
