@@ -53,6 +53,7 @@ const Testimonials = () => {
             pagination={{
             enabled: true,
             clickable: true,
+            position: 'start'
             }}
             
             navigation={{
