@@ -2,26 +2,18 @@ import SwiperCore, { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, Vir
 import { EffectCube } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { useState, useContext, useEffect } from 'react';
-//import testimonails from '../../testimonials';
+import { useContext, useEffect } from 'react';
 import TestimonialCard from '../testimonial card/testimonial-card.component';
 import { TestimonialContext } from '../../context/testimonial/testimonial.context';
 
 import 'swiper/scss';
-//import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-// import 'swiper/scss/scrollbar';
-// import "swiper/css/free-mode";
-// import "swiper/css/thumbs";
 import './testimonials.styles.scss'
 
 SwiperCore.use([Navigation, Pagination, Thumbs, Virtual, FreeMode, Autoplay, Mousewheel, Keyboard, EffectCoverflow])
 
 const Testimonials = () => {
     const {testimonial} = useContext(TestimonialContext)
-    //console.log(testimonial)
-    const [navState, setNavState] = useState(false)
-    //const [thumbsSwiper, setThumbsSwiper] = useState(() => null);
     useEffect (() => {
         if (window.innerWidth > 600) {
             import('swiper/scss/navigation')
@@ -48,7 +40,7 @@ const Testimonials = () => {
             delay: 10000,
             disableOnInteraction: true,
             }}
-            //EffectCube
+         
             effect={'coverflow'}
             pagination={{
             enabled: true,
