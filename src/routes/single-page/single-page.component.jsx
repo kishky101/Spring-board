@@ -22,7 +22,7 @@ const Page = () => {
       <OurPrograms />
       <AboutUs />
       <CourseContainer>
-        {courses.map((course) => {
+        {courses.filter(course => course.id < 7).map((course) => {
           if (course.id !== 6) {
             return <CourseCard course={course} key={course.id} />
           }else {
