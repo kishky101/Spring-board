@@ -15,7 +15,7 @@ SwiperCore.use([Navigation, Pagination, Thumbs, Virtual, FreeMode, Autoplay, Mou
 const Testimonials = () => {
     const {testimonial} = useContext(TestimonialContext)
     useEffect (() => {
-        if (window.innerWidth > 600) {
+        if (window.innerWidth > 786) {
             import('swiper/scss/navigation')
         }
     })

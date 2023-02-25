@@ -11,6 +11,7 @@ import ProgressBar from "../../components/progress-bar/progress-bar.component";
 import "./single-page.styles.scss";
 import CourseCard from "../../components/course-card/course-card.component";
 import CourseCard2 from "../../components/course-card/course-card2.component";
+import Spinner from "../../components/spinner/spinner.component";
 const Page = () => {
   const course = useContext(CourseContext);
   const { courses } = course;

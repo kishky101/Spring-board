@@ -11,6 +11,7 @@
     border: 3px solid var(--header-text-clr);
     border-radius: 30% 10% ;
     background-color: rgb(145, 123, 90, .1);
+    z-index: 10000;
 
     .testimonial-card-img {
         width: 200px;
@@ -56,7 +57,7 @@
         }
 
         p {
-            font-family: "Open sans", sans-serif;
+            font-family:'Amiri', "Open sans", sans-serif;
             font-size: 20px;
             line-height: 30px;
             text-align: center;
@@ -66,23 +67,48 @@
 
     }
 
-    @media screen and (max-width: 800px) {
-        padding: 30px 40px 10px 10px;
-        max-width: 90%;
+    // @media screen and (max-width: 800px) {
+    //     padding: 30px 40px 10px 10px;
+    //     max-width: 90%;
 
 
-        .testimonial-card {
+    //     .testimonial-card {
 
-            p {
-                text-align: justify;
-            }
-        }
+    //         p {
+    //             text-align: justify;
+    //         }
+    //     }
         
-    }
+    // }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 800px) {
         padding: 30px 5px 10px 5px;
-        border-radius: 0% 10%;
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 10px ;
+        position: relative;
+        z-index: 100;
+        perspective: 100;
+        transform: translateZ(50px);
+        //background-color: white;
+
+        &::before {
+            content: '';
+            position: absolute;
+            //top: 0;
+            //bottom: 0;
+            //right: 0;
+            //left: 0;
+            z-index: -100;
+            transform: translateZ(-50px);
+            //scale: 1.01;
+            border-radius: inherit;
+            inset: -.5rem;
+            //height: 100%;
+            //width: 100%;
+            background: linear-gradient(-45deg,  var(--light-brown-clr),transparent, transparent, transparent,transparent,transparent, var( --header-text-clr));
+            //background-color: red;
+        }
 
         .testimonial-card-img {
             width: 150px;
