@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { StaffProvider } from './context/staff/staff.context'
@@ -11,7 +11,7 @@ import App from './App'
 import './index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
+  <StrictMode>
     <BrowserRouter>
       <UserProvider>
         <RegisterationProvider>
@@ -27,5 +27,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </RegisterationProvider>
       </UserProvider>
     </BrowserRouter>
-  
+  </StrictMode>
 )

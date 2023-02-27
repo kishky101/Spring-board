@@ -10,7 +10,7 @@ import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './testimonials.styles.scss'
 
-SwiperCore.use([Navigation, Pagination, Thumbs, Virtual, FreeMode, Autoplay, Mousewheel, Keyboard, EffectCoverflow])
+SwiperCore.use([Navigation, Pagination, Autoplay, Mousewheel, Keyboard, EffectCoverflow])
 
 const Testimonials = () => {
     const {testimonial} = useContext(TestimonialContext)
@@ -55,7 +55,7 @@ const Testimonials = () => {
                 hideOnClick: true,
                 hiddenClass: '.swiper-button-disabled'
             }}
-            modules={[Autoplay, Pagination, Navigation, Mousewheel, Keyboard, EffectCube]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel, Keyboard, EffectCoverflow]}
             className="mySwiper2"
             >
 
