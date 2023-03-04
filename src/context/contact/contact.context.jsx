@@ -10,7 +10,7 @@ export const ContactProvider = ({children}) => {
     const [contacts, setContacts] = useState(() => []);
 
     useEffect(() => {
-        const reponse = getDocFromFirebase('Contact Form');
+        const reponse = getDocFromFirebase('Contact');
         reponse.then(data => setContacts(data.sort((a, b) => a.createdAt - b.createdAt)));
     }, [])
 
