@@ -37,11 +37,14 @@ const RegisterationList = () => {
                         <th>AGREEMENT</th>
                     </tr>
                 </thead>
+                { register.length?
                 <tbody>
-                    {
+                    {   
                         register.map(list => <RegisterUserCard key={list.createdAt.seconds} userObj={list} seconds={list.createdAt.seconds} />)
                     }
                 </tbody>
+                    : <span> There is no name on the register yet </span>    
+                    }
             </table>
         </div>
     )
