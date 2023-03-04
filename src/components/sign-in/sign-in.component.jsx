@@ -18,7 +18,6 @@ const SignIn = () => {
 
     const userContext = useContext(UserContext);
     const { user } = userContext;
-    console.log(user)
 
     const {email, password} = formFields;
 
