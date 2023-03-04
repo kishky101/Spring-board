@@ -38,7 +38,7 @@ const Contact = () => {
             alert('All fields are required')
             return
         }
-        const userDocRef = createUserRegistrationDocument(formFields, 'Contact Form', undefined, 'fullName');
+        const userDocRef = createUserRegistrationDocument(formFields, 'Contact', undefined, 'fullName');
         clearFormFields()
         return navigate('/contact-successful')
     }
