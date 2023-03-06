@@ -34,7 +34,7 @@ const templatePrams = {
 }
 
 
-  return emailjs.send('service_z3ofvel', 'template_hoq5edh', templatePrams, 'Qa3iaKrAZjDTLGKe3')
+  return emailjs.send('service_9q7j91t', 'template_hoq5edh', templatePrams, 'Qa3iaKrAZjDTLGKe3')
     .then((result) => {
         //console.log(result.text);
     }, (error) => {
@@ -74,7 +74,7 @@ const templatePrams = {
 }
 
 
-  return emailjs.send('service_z3ofvel', 'template_i3fq5ku', templatePrams, 'Qa3iaKrAZjDTLGKe3')
+  return emailjs.send('service_9q7j91t', 'template_i3fq5ku', templatePrams, 'Qa3iaKrAZjDTLGKe3')
     .then((result) => {
         //console.log(result.text);
     }, (error) => {
