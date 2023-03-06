@@ -1,4 +1,5 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/user/user.context';
 import { ContactContext } from '../../context/contact/contact.context';
 import MessageCard from '../../components/mesage-card/message-card.component';
@@ -6,7 +7,7 @@ import AdminNav from '../../components/admin-nav/admin-nav.component';
 import './messages.styles.scss'
 
 const Message = () => {
-
+    const navigate = useNavigate();
     const MessageContext = useContext(ContactContext);
     const {contacts} = MessageContext
     const userContext = useContext(UserContext);
