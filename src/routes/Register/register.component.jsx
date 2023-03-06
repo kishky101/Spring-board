@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import sendEmail from '../../utils/emailJS/emailJS.utils';
+import { sendEmail, sendEmailClient } from '../../utils/emailJS/emailJS.utils';
 import RoutesHero from '../../components/routes-hero/routes-hero.component';
 import FormInput from '../../components/form-input/form-input.component';
 import GetInTouch from '../../components/get-in-touch/get-in-touch.component';
@@ -47,6 +47,7 @@ const Register = () => {
         const userDocRef = createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
         clearFormFields()
         sendEmail(formFields)
+        sendEmailClient(formFields)
         return navigate("/payment")
     }
 
