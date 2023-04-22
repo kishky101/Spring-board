@@ -9,6 +9,7 @@ import { createUserRegistrationDocument } from '../../utils/firebase/firebase.ut
 import ProgressBar from '../../components/progress-bar/progress-bar.component';
 import { motion } from 'framer-motion';
 import { scaleIn, fadeIn } from '../../utils/framer-motion/framer';
+import Checkbox from '../../components/checkboxes/checkboxes.component';
 import './register.styles.scss'
 
 const defaultFields = {
@@ -38,16 +39,16 @@ const Register = () => {
 
     const clearFormFields = () => setFormFields(defaultFields)
 
-    const onSubmitHandler = (event) => {
+    const onSubmitHandler = async (event) => {
         event.preventDefault();
         if(!firstName || !lastName || !email || !number || !background || !internet || !days || !agreement || !sponsor) {
             alert('All fields are required')
             return
         }
-        const userDocRef = createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
+        await createUserRegistrationDocument(formFields, 'Registeration', undefined, 'fullName')
         clearFormFields()
-        sendEmail(formFields)
-        sendEmailClient(formFields)
+        await sendEmail(formFields)
+        await sendEmailClient(formFields)
         return navigate("/payment")
     }
 
@@ -107,7 +108,7 @@ const Register = () => {
                         />
                         <label className='register-label' htmlFor = 'arabic-background'>Background in Arabic
                         * </label>
-                            <FormInput 
+                            <Checkbox 
                                 label={'Basic - I want to start from the scratch'}
                                 type='radio'
                                 name='background'
@@ -116,7 +117,7 @@ const Register = () => {
                                 value={'Basic - I want to start from the scratch'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'Intermediate - I can only read Qur\'an'}
                                 type='radio'
                                 name='background'
@@ -125,7 +126,7 @@ const Register = () => {
                                 value={'Intermediate - I can only read Qur\'an'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'Advance - I can read any Arabic text, but I want to learn more'}
                                 type='radio'
                                 name='background'
@@ -137,7 +138,7 @@ const Register = () => {
                     
                         <label className='register-label' htmlFor = 'internet'>Access to Internet
                         *</label>
-                            <FormInput 
+                            <Checkbox 
                                 label={'Excellent'}
                                 type='radio'
                                 name='internet'
@@ -146,7 +147,7 @@ const Register = () => {
                                 value={'Excellent'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'very-good'}
                                 type='radio'
                                 name='internet'
@@ -155,7 +156,7 @@ const Register = () => {
                                 value={'very-good'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'fair'}
                                 type='radio'
                                 name='internet'
@@ -164,7 +165,7 @@ const Register = () => {
                                 value={'fair'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'poor'}
                                 type='radio'
                                 name='internet'
@@ -175,7 +176,7 @@ const Register = () => {
                             />
                         
                         <label className='register-label' htmlFor = 'days'>Which Option do you prefer? * </label>
-                            <FormInput 
+                            <Checkbox 
                                 label={'WEEKDAYS - Mondays - Wednesdays'}
                                 type='radio'
                                 name='days'
@@ -183,7 +184,7 @@ const Register = () => {
                                 value={'WEEKDAYS - Mondays - Wednesdays'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'WEEKENDS - Saturdays and Sundays'}
                                 type='radio'
                                 name='days'
@@ -191,7 +192,7 @@ const Register = () => {
                                 value={'WEEKENDS - Saturdays and Sundays'}
                                 onChange={onChangeHandler}
                             />
-                            <FormInput 
+                            <Checkbox 
                                 label={'WEEKDAYS - Thursdays and Fridays (For Basic Classes only)'}
                                 type='radio'
                                 name='days'
@@ -209,7 +210,7 @@ const Register = () => {
                             onChange={onChangeHandler}
                         />
                         <label className='register-label' htmlFor='agreement'>* I understand that I will have to pay N30,000/term OR $60  OR 55 Euro OR 50 UK pound/term to  confirm  my registration to any of the accounts below:  </label>
-                            <FormInput 
+                            <Checkbox 
                                 label={'YES'}
                                 type='checkbox'
                                 name='agreement'
