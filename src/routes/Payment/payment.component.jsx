@@ -29,12 +29,6 @@ const Payment = () => {
                                 </td>
                             </tr>
                             <tr>
-                                <td>STANBIC: </td>
-                                <td>
-                                <ClipboardCopy copyText={'0603687481'} />
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>JAIZ:</td>
                                 <td>
                                 <ClipboardCopy copyText={'0003522837'} />

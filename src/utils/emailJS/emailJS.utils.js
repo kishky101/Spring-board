@@ -54,7 +54,6 @@ const message = `
     <h3 style = "font-size: 28px">Payment in Naira - N30,000</h3>
     <h4 style = "font-size: 25px">Account Name: Springboard Language Concept</h4>
     <p style = "font-size: 20px">GTBANK:- 0127131785</p>
-    <p style = "font-size: 20px">STANBIC:- 0603687481</p>
     <p style = "font-size: 20px">JAIZ:- 0003522837</p>
   </div>
   <div>
