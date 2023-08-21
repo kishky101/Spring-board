@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='footer'>
             <div>
                 <p>copyright springboard language academy. <span>all rights reserved</span></p>
-                <p>web designed by <span>kishky</span></p>
+                <p>web designed by <a href='https://kishky.dev'>kishky</a></p>
             </div>
         </div>
     )

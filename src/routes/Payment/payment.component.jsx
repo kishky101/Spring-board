@@ -34,7 +34,21 @@ const Payment = () => {
                                 <ClipboardCopy copyText={'0003522837'} />
                                 </td>
                             </tr>
-                        </tbody>
+                        </tbody> 
+                    </table>
+                    <table>
+                        <caption>
+                            <h5>OR</h5>
+                            <h6>Account Name: Springboard Language Academy Ltd</h6>
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <td>LOTUS: </td>
+                                <td>
+                                <ClipboardCopy copyText={'1000005169'} />
+                                </td>
+                            </tr>
+                        </tbody> 
                     </table>
                 </div>
 

@@ -20,7 +20,7 @@
             margin-bottom: 30px;
         }
 
-        p:last-of-type span {
+        p:last-of-type a {
             color: rgb(90, 59, 13);
         }
     }
@@ -38,9 +38,6 @@
                 font-size: .8rem;
             }
 
-            p:last-of-type span {
-                color: rgb(90, 59, 13);
-            }
         }
     }
 }
