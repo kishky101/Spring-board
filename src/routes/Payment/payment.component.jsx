@@ -18,7 +18,7 @@ const Payment = () => {
                 <div className='payment-details'>
                     <table>
                         <caption>
-                            <h5>Payment in naira - <span>N30,000</span></h5>
+                            <h5>Payment in naira - <span>N40,000</span></h5>
                             <h6>Account Name: Springboard Language Concept</h6>
                         </caption>
                         <tbody>
